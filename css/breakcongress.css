@@ -39,7 +39,7 @@ h1 {
     font-size: 71px;
     text-transform: uppercase;
     text-align: center;
-    padding: 70px 0px 0px 0px;
+    padding: 70px 32px 0px;
     letter-spacing: 8px;
 }
 h2 {
@@ -50,6 +50,7 @@ h2 {
     text-transform: uppercase;
     text-align: center;
     letter-spacing: 3px;
+    padding: 0 32px;
 }
 h3 {
     font-family: "futura-pt";
@@ -68,6 +69,7 @@ h4 {
     font-size: 38px;
     letter-spacing: 1px;
     margin-bottom: 25px;
+    padding: 0 32px;
 }
 h5 {
     text-align: center;
@@ -78,6 +80,7 @@ h5 {
     font-weight: 500;
     letter-spacing: 0px;
     margin-bottom: 50px;
+    padding: 0 32px;
 }
 h6 {
     text-align: center;
@@ -86,6 +89,29 @@ h6 {
     font-size: 29px;
     letter-spacing: 1px;
     margin-bottom: 25px;
+}
+@media screen and (max-width: 479px) {
+    h1 {
+        font-size: 48px;
+    }
+
+    h2 {
+        font-size: 36px;
+    }
+
+    h3 {
+        font-size: 14px;
+    }
+
+    h4 {
+        font-size: 32px;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+        width: auto;
+    }
 }
 blockquote {
     display: inline-block;
@@ -96,26 +122,30 @@ blockquote {
     font-family: "Courier New", mono;
     margin-top: 15px;
     margin-bottom: 60px;
+    word-wrap: break-word;
+    max-width: calc(100% - 64px);
 }
 header {
 }
 header p {
-    max-width: 860px;
-    margin: 0px auto;
-    text-align: center;
-    font-size: 22px;
     color: #c5c5c5;
+    font-size: 22px;
     font-weight: 300;
     line-height: 30px;
+    margin: 0px auto;
+    max-width: 860px;
+    padding: 0 32px;
+    text-align: center;
 }
 .action {
-    width: 900px;
     background: #353535;
-    padding: 45px 60px;
     margin: 35px auto 50px auto;
+    max-width: 900px;
+    padding: 45px 60px;
 }
 .action .email_signup {
     width: 430px;
+    max-width: 100%;
     height: 60px;
     position: relative;
     display: inline-block;
@@ -126,7 +156,6 @@ header p {
     left: 0px;
     top: 0px;
     width: 100%;
-    height: 100%;
     z-index: 2;
     background: #222;
     z-index: 2;
@@ -189,10 +218,50 @@ header p {
 .action span.disclaimer {
     display: block;
     font-size: 15px;
+    line-height: 1.6;
     text-align: center;
     margin: 20px 0px 0px 0px;
     color: #898989;
 }
+
+@media screen and (max-width: 899px) {
+    .action .or {
+        display: block;
+        float: none;
+        margin: 0 auto;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 559px) {
+    .action .email_signup {
+        height: 120px;
+    }
+
+    .action .email_signup input {
+        width: 100%;
+    }
+
+    .action .email_signup button {
+        left: 0;
+        top: 60px;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 416px) {
+    .action .twitter_signup {
+        height: 90px;
+        position: relative;
+        width: 200px;
+    }
+
+    .action .twitter_signup button {
+        height: 100%;
+        width: 100%;
+    }
+}
+
 button {
     height: 60px;
     border: 0px;
@@ -209,6 +278,7 @@ p.explanation {
     max-width: 800px;
     margin: 0px auto 0px auto;
     line-height: 1.3em;
+    padding: 0 32px;
 }
 .columns {
     margin-bottom: 60px;
@@ -216,10 +286,12 @@ p.explanation {
 .columns > div {
     display: inline-block;
     width: 485px;
+    max-width: 100%;
 }
 .columns > div:first-child {
     border-right: 1px solid #323232;
 }
+
 section {
     background: #282828;
     padding: 10px 0px 55px 0px;
@@ -243,6 +315,7 @@ section p {
     color: #d5d5d5;
     font-weight: 300;
     line-height: 24px;
+    padding: 0 32px;
 }
 .share {
     border-radius: 60px;
@@ -284,6 +357,7 @@ section p {
 }
 .logos {
     margin: 50px 0px; 
+    overflow: hidden;
 }
 .logos a {
     opacity: .6;
@@ -292,16 +366,17 @@ section p {
     opacity: .8;
 }
 .logos img {
-    max-width: 300px;
+    max-width: calc(100% - 48px);
+    width: 300px;
     height: auto;
     vertical-align: middle;
-    margin: 0px 20px;
+    margin: 0px 20px 32px;
 }
 .press {
     font-size: 22px;
     color: #999;
     font-weight: 100;
-    padding-bottom: 70px;
+    padding: 0 32px 70px;
 }
 .press a {
     color: #bbb;
