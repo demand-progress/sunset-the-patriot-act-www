@@ -3,20 +3,43 @@ var trackOptimizely = function(ev) {
     window.optimizely.push(["trackEvent", ev]);
 }
 
+var requiredFields = [
+    'name',
+    'email',
+    'address',
+    'zip',
+];
+
 document.querySelector('.email_signup form').addEventListener('submit', function(e) {
     e.preventDefault();
     var tag = 'breakcongressinternet';
 
-    if (!document.getElementById('email').value) {
-        alert('Please enter your email address.');
-        return document.getElementById('email').focus();
-    }
 
     var data = new FormData();
     data.append('guard', '');
     data.append('hp_enabled', true);
-    data.append('member[email]', document.getElementById('email').value);
     data.append('tag', tag);
+
+    for (var i = 0; i < requiredFields.length; i++) {
+        var field = requiredFields[i];
+
+        if (!document.getElementById(field).value) {
+            alert('Please enter your ' + field + '.');
+            return document.getElementById(field).focus();
+        }
+
+        data.append('member[' + field + ']', document.getElementById(field).value);
+    }
+
+
+    // DEBUG
+    document.activeElement.blur();
+    var thanks = document.getElementById('thanks');
+    thanks.style.display = 'block';
+    return setTimeout(function() {
+        thanks.style.opacity = 1;
+    }, 50);
+    // END DEBUG
 
     var url = 'https://queue.fightforthefuture.org/action';
 
