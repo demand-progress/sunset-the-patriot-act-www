@@ -153,7 +153,6 @@ header p {
 .action .email_signup #thanks {
     position: absolute;
     left: 0px;
-    bottom: 0px;
     width: 100%;
     z-index: 2;
     background: #222;
@@ -221,7 +220,8 @@ header p {
 .action span.disclaimer {
     display: block;
     font-size: 15px;
-    line-height: 1.6;
+    line-height: 1.4;
+    clear: both;
     text-align: center;
     margin: 20px 0px 0px 0px;
     color: #898989;
@@ -345,6 +345,7 @@ section p {
 }
 .press a {
     color: #bbb;
+    word-wrap: break-word;
 }
 .press small {
     display: block;
@@ -557,4 +558,85 @@ div.social-buttons a.twitter {
 div.social-buttons a.email {
     background-color: #14ac2b;
     background-image: url(../images/social/icon-email.gif);
+}
+
+
+
+/* Checkbox */
+.squaredFour {
+    width: 20px;    
+    margin: 20px auto;
+    position: relative;
+    line-height: 1.2;
+    font-size: 16px;
+    display: block;
+    text-align: left;
+    width: 100%;
+    color: #898989;
+}
+
+.squaredFour input[type=checkbox] {
+    visibility: hidden;
+    height: auto;
+    width: 1px;
+    padding: 0;
+    margin: 0;
+}
+
+.squaredFour label.text {
+    cursor: pointer;
+    float: left;
+    margin: -18px 0 24px;
+    padding: 0 0 0 36px;
+    position: relative;
+}
+
+.squaredFour label.checkbox {
+    cursor: pointer;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 0;
+    left: 0;
+    border-radius: 4px;
+
+    -webkit-box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0,0,0,0.5);
+    -moz-box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0,0,0,0.5);
+    box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0,0,0,0.5);
+    background: #fcfff4;
+
+    background: -webkit-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+    background: -moz-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+    background: -o-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+    background: -ms-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+    background: linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfff4', endColorstr='#b3bead',GradientType=0 );
+}
+
+.squaredFour label.checkbox:after {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    opacity: 0;
+    content: '';
+    position: absolute;
+    width: 9px;
+    height: 5px;
+    background: transparent;
+    top: 4px;
+    left: 4px;
+    border: 3px solid #333;
+    border-top: none;
+    border-right: none;
+
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.squaredFour input[type=checkbox]:checked + label.checkbox:after {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: alpha(opacity=100);
+    opacity: 1;
 }

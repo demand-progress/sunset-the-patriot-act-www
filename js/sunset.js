@@ -38,6 +38,7 @@ document.querySelector('.email_signup form').addEventListener('submit', function
     thanks.style.display = 'block';
     return setTimeout(function() {
         thanks.style.opacity = 1;
+        document.querySelector('form button').setAttribute('disabled', true);
     }, 50);
     // END DEBUG
 
@@ -73,11 +74,6 @@ function modal_hide(id) {
         overlayNode.style.display = 'none';
     }, 400);
 }
-
-document.getElementById('twitter-button').addEventListener('click', function(e) {
-    e.preventDefault();
-    modal_show('twitter_modal');
-}, false);
 
 var bindModalEvents = function(modal) {
     modal = document.getElementById(modal);
