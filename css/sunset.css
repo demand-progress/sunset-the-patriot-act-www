@@ -218,13 +218,14 @@ header p {
     background: #49b9d9;
 }
 .action span.disclaimer {
+    clear: both;
+    color: #898989;
     display: block;
     font-size: 15px;
     line-height: 1.4;
-    clear: both;
+    margin: 20px auto 0;
+    max-width: 430px;
     text-align: center;
-    margin: 20px 0px 0px 0px;
-    color: #898989;
 }
 
 button {
