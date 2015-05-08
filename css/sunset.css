@@ -140,7 +140,7 @@ header p {
 .action {
     background: #353535;
     margin: 35px auto 50px auto;
-    max-width: 900px;
+    max-width: 600px;
     padding: 45px 60px;
 }
 .action .email_signup {
