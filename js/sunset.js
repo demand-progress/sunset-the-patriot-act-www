@@ -1,24 +1,19 @@
-var trackOptimizely = function(ev) {
-    window['optimizely'] = window['optimizely'] || [];
-    window.optimizely.push(["trackEvent", ev]);
-}
-
 var requiredFields = [
-    'name',
+    'first_name',
     'email',
-    'address',
-    'zip',
+    'street_address',
+    'postcode',
 ];
 
 document.querySelector('.email_signup form').addEventListener('submit', function(e) {
     e.preventDefault();
-    var tag = 'breakcongressinternet';
-
+    var tag = 'sunsetthepatriotact';
 
     var data = new FormData();
     data.append('guard', '');
     data.append('hp_enabled', true);
     data.append('tag', tag);
+    data.append('org', org.id);
 
     for (var i = 0; i < requiredFields.length; i++) {
         var field = requiredFields[i];
@@ -32,32 +27,25 @@ document.querySelector('.email_signup form').addEventListener('submit', function
     }
 
 
-    // DEBUG
     document.activeElement.blur();
     var thanks = document.getElementById('thanks');
+    document.querySelector('form button').setAttribute('disabled', true);
     thanks.style.display = 'block';
-    return setTimeout(function() {
-        thanks.style.opacity = 1;
-        document.querySelector('form button').setAttribute('disabled', true);
-    }, 50);
-    // END DEBUG
+    thanks.clientWidth;
+    thanks.style.opacity = 1;
 
-    var url = 'https://queue.fightforthefuture.org/action';
+    // var url = 'https://queue.fightforthefuture.org/action';
+    var url = 'http://localhost/x';
 
     var xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function() {
         if (xhr.readyState === 4) {
             console.log('response:', xhr.response);
         }
-    }.bind(this);
+    };
     xhr.open("post", url, true);
     xhr.send(data);
-    document.getElementById('thanks').style.display = 'block';
     modal_show('share_modal');
-    trackOptimizely('email_signup');
-    setTimeout(function() {
-        document.getElementById('thanks').style.opacity = 1;
-    }, 50);
 }, false);
 
 function modal_show(id) {
@@ -96,7 +84,6 @@ var fb = document.querySelectorAll('a.facebook');
 for (var i = 0; i < fb.length; i++) {
     fb[i].addEventListener('click', function(e) {
         e.preventDefault();
-        trackOptimizely('share');
         window.open('https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.breakcongressinternet.com%2F');
     }, false);
 }
@@ -105,7 +92,6 @@ var tws = document.querySelectorAll('a.twitter');
 for (var i = 0; i < tws.length; i++) {
     tws[i].addEventListener('click', function(e) {
         e.preventDefault();
-        trackOptimizely('share');
         window.open('https://twitter.com/intent/tweet?text='+encodeURIComponent(TWEET_TEXT));
     }, false);
 }
@@ -114,16 +100,16 @@ var ems = document.querySelectorAll('a.email');
 for (var i = 0; i < ems.length; i++) {
     ems[i].addEventListener('click', function(e) {
         e.preventDefault();
-        trackOptimizely('share');
         window.location.href = 'mailto:?subject='+encodeURIComponent(EMAIL_SUBJECT)+'&body=https%3A%2F%2Fwww.askthensa.com%2F';
     }, false);
 }
 
 document.getElementById('twitter_signup_submit').addEventListener('click', function(e) {
     console.log('Twitter signup!');
-    trackOptimizely('join_twitter');
 }, false);
 
+
+// Organizations
 var organizations = [
     {
         id: 'dp',
@@ -136,14 +122,14 @@ var organizations = [
         id: 'fftf',
         title: 'Fight for the Future',
         policyURL: 'https://www.fightforthefuture.org/privacy/',
-        pool: true,
+        pool: false,
     },
 
     {
         id: 'www',
         title: 'Win Without War',
         policyURL: 'http://winwithoutwar.org/privacy-policy/',
-        pool: false,
+        pool: true,
     },
 ];
 var ref = location.search.match(/ref=(\w+)/);
@@ -158,7 +144,5 @@ if (ref) {
 }
 
 if (!org) {
-    org = organizations[Math.floor(Math.random() * organizations.length)];
+    org = organizations[1];
 }
-
-console.log(org);
