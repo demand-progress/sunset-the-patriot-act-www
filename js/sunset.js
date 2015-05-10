@@ -27,6 +27,10 @@ document.querySelector('.email_signup form').addEventListener('submit', function
         data.append('member[' + field + ']', document.getElementById(field).value);
     }
 
+    var checkbox = document.getElementById('pooling-opt-in');
+    if (org.isPooling && !checkbox.checked) {
+        data.append('opt_out', 1);
+    }
 
     document.activeElement.blur();
     var thanks = document.getElementById('thanks');
@@ -135,22 +139,22 @@ var organizations = [
     {
         id: 'dp',
         title: 'Demand Progress',
-        policyURL: 'https://demandprogress.org/privacy-policy/',
-        pool: true,
+        isPooling: true,
+        disclaimer: '',
     },
 
     {
         id: 'fftf',
         title: 'Fight for the Future',
-        policyURL: 'https://www.fightforthefuture.org/privacy/',
-        pool: false,
+        isPooling: false,
+        disclaimer: '<a href="http://www.fightforthefuture.org/">Fight for the Future</a> and <a href="http://www.thecenterforrights.org/">Center for Rights</a> will contact you about future campaigns. <a href="http://www.fightforthefuture.org/privacy/">Privacy Policy</a></p>',
     },
 
     {
         id: 'www',
         title: 'Win Without War',
-        policyURL: 'http://winwithoutwar.org/privacy-policy/',
-        pool: true,
+        isPooling: true,
+        disclaimer: '',
     },
 ];
 var ref = location.search.match(/ref=(\w+)/);
@@ -166,4 +170,9 @@ if (ref) {
 
 if (!org) {
     org = organizations[1];
+}
+
+if (!org.isPooling) {
+    document.querySelector('.squaredFour').remove();
+    document.querySelector('.disclaimer').innerHTML = org.disclaimer;
 }
