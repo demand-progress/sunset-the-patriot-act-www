@@ -14,6 +14,7 @@ document.querySelector('.email_signup form').addEventListener('submit', function
     data.append('hp_enabled', true);
     data.append('tag', tag);
     data.append('org', org.id);
+    data.append('action_comment', 'Please allow Section 215 of the PATRIOT Act to sunset. Our democracy depends on it.');
 
     for (var i = 0; i < requiredFields.length; i++) {
         var field = requiredFields[i];
