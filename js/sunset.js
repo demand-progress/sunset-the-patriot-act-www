@@ -46,7 +46,8 @@ document.querySelector('.email_signup form').addEventListener('submit', function
     };
     xhr.open("post", url, true);
     xhr.send(data);
-    modal_show('share_modal');
+    modal_show('call_tool');
+    document.querySelector('input[type=tel]').focus();
 }, false);
 
 function modal_show(id) {
@@ -80,6 +81,7 @@ var bindModalEvents = function(modal) {
 }
 bindModalEvents('twitter_modal');
 bindModalEvents('share_modal');
+bindModalEvents('call_tool');
 
 var fb = document.querySelectorAll('a.facebook');
 for (var i = 0; i < fb.length; i++) {
@@ -107,6 +109,24 @@ for (var i = 0; i < ems.length; i++) {
 
 document.getElementById('twitter_signup_submit').addEventListener('click', function(e) {
     console.log('Twitter signup!');
+}, false);
+
+document.querySelector('.call_tool form').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    var phone = document.querySelector('input[type=tel]').value.replace(/[^\d]/g, '');
+    var url = 'https://dp-call-congress.herokuapp.com/create?campaignId=default&userPhone=' + phone;
+    var xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4) {
+            console.log(xhr.response);
+        }
+    };
+    xhr.open('get', url, true);
+    xhr.send();
+
+    modal_hide('call_tool');
+    modal_show('share_modal');
 }, false);
 
 
