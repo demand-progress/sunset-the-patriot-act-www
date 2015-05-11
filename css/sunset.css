@@ -130,6 +130,9 @@ blockquote {
 }
 header {
 }
+header em {
+    font-style: italic;
+}
 header p {
     color: #c5c5c5;
     font-size: 20px;
