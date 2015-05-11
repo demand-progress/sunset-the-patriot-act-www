@@ -506,6 +506,13 @@ section p {
     margin: 0px 10px;
     font-size: 16px;
 }
+.overlay.call_tool .modal a.share {
+    background-color: transparent;
+    color: #bbb;
+    font-size: 12px;
+    margin: 0 0 12px;
+    padding: 0;
+}
 .overlay.call_tool .modal .phone-number {
     margin: 16px 0 0;
 }

@@ -122,6 +122,13 @@ document.querySelector('.action h4 a.letter').addEventListener('click', function
     modal_show('letter');
 });
 
+document.querySelector('.call_tool a.share').addEventListener('click', function(e) {
+    e.preventDefault();
+
+    modal_hide('call_tool');
+    modal_show('share_modal');
+});
+
 document.querySelector('.call_tool form').addEventListener('submit', function(e) {
     e.preventDefault();
 
