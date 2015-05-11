@@ -149,6 +149,10 @@ header p {
     padding: 0 32px;
     text-align: center;
 }
+header p a.open-call-tool {
+    cursor: text;
+    text-decoration: none;
+}
 header h1 {
     font-size: 48px;
 }
