@@ -137,6 +137,10 @@ header p {
     padding: 0 32px;
     text-align: center;
 }
+header h2 {
+    color: #962727;
+    padding: 32px 32px 16px;
+}
 .action {
     background: #353535;
     margin: 35px auto 50px auto;
