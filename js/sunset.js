@@ -249,7 +249,7 @@ var organizations = [
         disclaimer: '',
     },
 ];
-var ref = location.search.match(/ref=(\w+)/);
+var ref = location.search.match(/ref=([\w-]+)/);
 var org;
 if (ref) {
     for (var i = 0; i < organizations.length; i++) {
