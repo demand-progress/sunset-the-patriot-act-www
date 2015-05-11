@@ -305,6 +305,9 @@ section p {
     background: #222;
     display: inline-block;
 }
+section .share {
+    margin: 0 0 22px;
+}
 .overlay .gutter .modal .share {
     background: #eee;
     margin: 20px auto 10px auto;
