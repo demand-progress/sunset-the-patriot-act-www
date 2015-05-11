@@ -406,6 +406,7 @@ section p {
     padding-bottom: 10px;
     position: relative;
     text-align: center;
+    overflow: auto;
 }
 .overlay .modal a.close {
     position: absolute;

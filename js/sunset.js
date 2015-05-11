@@ -189,3 +189,17 @@ if (!org.isPooling) {
     document.querySelector('.squaredFour').remove();
     document.querySelector('.disclaimer').innerHTML = org.disclaimer;
 }
+
+var resizeTimeout = false;
+window.addEventListener('resize', function(e) {
+    resizeTimeout = setTimeout(onResize, 300);
+}, false);
+
+function onResize() {
+    var modals = document.getElementsByClassName('modal');
+    for (var i = 0; i < modals.length; i++) {
+        modals[i].style.maxHeight = innerHeight + 'px';
+    }
+}
+
+// modal_show('call_tool');
