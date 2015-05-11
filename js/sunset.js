@@ -148,7 +148,7 @@ var organizations = [
         id: 'fftf', // Default
         title: 'Fight for the Future',
         isPooling: false,
-        disclaimer: '<a href="http://www.fightforthefuture.org/" target="_blank">Fight for the Future</a> and <a href="http://www.thecenterforrights.org/">Center for Rights</a> will contact you about future campaigns. <a href="http://www.fightforthefuture.org/privacy/" target="_blank">Privacy Policy</a></p>',
+        disclaimer: '<a href="http://www.fightforthefuture.org/" target="_blank">Fight for the Future</a> and <a href="http://www.thecenterforrights.org/">Center for Rights</a> will contact you about future campaigns. <a href="http://www.fightforthefuture.org/privacy/" target="_blank">Privacy Policy</a>.</p>',
     },
 
     {
@@ -162,7 +162,7 @@ var organizations = [
         id: 'dp-ns',
         title: 'Demand Progress',
         isPooling: false,
-        disclaimer: 'Demand Progress does not share your email address without your permission. We may send you updates on this and other important campaigns by email. If at any time you would like to unsubscribe from our email list, you may do so. <br> <a href="http://www.demandprogress.org/privacy" target="_blank">Privacy Policy</a>',
+        disclaimer: 'I will receive updates from <a href="https://demandprogress.org" target="_blank">Demand Progress</a>.',
     },
 
     {
@@ -183,7 +183,7 @@ var organizations = [
         id: 'ca-ns',
         title: 'CREDO Action',
         isPooling: false,
-        disclaimer: 'You\'ll receive periodic updates on offers and activism opportunities from CREDO Action. <br> <a href="http://www.credomobile.com/privacy" target="_blank">Privacy Policy</a>',
+        disclaimer: 'I will receive updates from <a href="http://credoaction.com" target="_blank">CREDO Action</a>.',
     },
 
     {
@@ -232,14 +232,14 @@ var organizations = [
         id: 'ddc',
         title: 'Democrats.com',
         isPooling: false,
-        disclaimer: 'Democrats.com LLC has served Democratic and progressive voters since 2000 and we are committed to protecting your privacy. <br> <a href="http://www.democrats.com/privacy" target="_blank">Privacy Policy</a>',
+        disclaimer: 'I will receive updates from <a href="http://www.democrats.com" target="_blank">Democrats.com</a>.',
     },
 
     {
         id: 'fp',
         title: 'Free Press',
         isPooling: false,
-        disclaimer: 'You will receive periodic updates from Free Press and the Free Press Action Fund. You may unsubscribe at any time. <br> <a href="http://www.freepress.net/privacy-copyright" target="_blank">Privacy Policy</a>',
+        disclaimer: 'I will receive updates from <a href="http://www.freepress.net" target="_blank">Free Press</a>.',
     },
 
     {
