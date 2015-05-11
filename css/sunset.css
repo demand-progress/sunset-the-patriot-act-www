@@ -349,13 +349,16 @@ section .share {
 }
 .logos a {
     opacity: .6;
+
+    -webkit-transition: opacity 0.3s;
+            transition: opacity 0.3s;
 }
 .logos a:hover {
     opacity: .8;
 }
 .logos img {
-    max-width: calc(100% - 48px);
-    width: 300px;
+    border-radius: 5px;
+    max-width: 280px;
     height: auto;
     vertical-align: middle;
     margin: 0px 20px 32px;
