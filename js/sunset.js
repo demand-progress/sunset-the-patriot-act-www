@@ -84,6 +84,7 @@ var bindModalEvents = function(modal) {
 }
 bindModalEvents('share_modal');
 bindModalEvents('call_tool');
+bindModalEvents('call_tool_script');
 bindModalEvents('letter');
 
 var fb = document.querySelectorAll('a.facebook');
@@ -144,7 +145,7 @@ document.querySelector('.call_tool form').addEventListener('submit', function(e)
     xhr.send();
 
     modal_hide('call_tool');
-    modal_show('share_modal');
+    modal_show('call_tool_script');
 }, false);
 
 
@@ -286,5 +287,3 @@ function onResize() {
         modals[i].style.maxHeight = innerHeight + 'px';
     }
 }
-
-// modal_show('call_tool');
