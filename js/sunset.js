@@ -39,8 +39,7 @@ document.querySelector('.email_signup form').addEventListener('submit', function
     thanks.clientWidth;
     thanks.style.opacity = 1;
 
-    // var url = 'https://queue.fightforthefuture.org/action';
-    var url = 'http://localhost/x';
+    var url = 'https://queue.fightforthefuture.org/action';
 
     var xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function() {
