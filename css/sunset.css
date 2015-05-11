@@ -130,6 +130,11 @@ blockquote {
 }
 header {
 }
+header .fight-back {
+    color: #A82424;
+    padding: 12px 0 0;
+    font-weight: bold;
+}
 header em {
     font-style: italic;
 }
