@@ -145,6 +145,13 @@ document.querySelector('.call_tool form').addEventListener('submit', function(e)
 // Organizations
 var organizations = [
     {
+        id: 'fftf', // Default
+        title: 'Fight for the Future',
+        isPooling: false,
+        disclaimer: '<a href="http://www.fightforthefuture.org/">Fight for the Future</a> and <a href="http://www.thecenterforrights.org/">Center for Rights</a> will contact you about future campaigns. <a href="http://www.fightforthefuture.org/privacy/">Privacy Policy</a></p>',
+    },
+
+    {
         id: 'dp',
         title: 'Demand Progress',
         isPooling: true,
@@ -152,15 +159,92 @@ var organizations = [
     },
 
     {
-        id: 'fftf',
-        title: 'Fight for the Future',
+        id: 'dp-ns',
+        title: 'Demand Progress',
         isPooling: false,
-        disclaimer: '<a href="http://www.fightforthefuture.org/">Fight for the Future</a> and <a href="http://www.thecenterforrights.org/">Center for Rights</a> will contact you about future campaigns. <a href="http://www.fightforthefuture.org/privacy/">Privacy Policy</a></p>',
+        disclaimer: '', // TODO: Add disclaimer
+    },
+
+    {
+        id: 'la',
+        title: 'Left Action',
+        isPooling: true,
+        disclaimer: '',
+    },
+
+    {
+        id: 'ca',
+        title: 'CREDO Action',
+        isPooling: true,
+        disclaimer: '',
+    },
+
+    {
+        id: 'ca-ns',
+        title: 'CREDO Action',
+        isPooling: false,
+        disclaimer: '', // TODO: Add disclaimer
+    },
+
+    {
+        id: 'ra',
+        title: 'RootsAction',
+        isPooling: true,
+        disclaimer: '',
+    },
+
+    {
+        id: 'dk',
+        title: 'Daily Kos',
+        isPooling: true,
+        disclaimer: '',
+    },
+
+    {
+        id: 'rhrc',
+        title: 'RH Reality Check',
+        isPooling: true,
+        disclaimer: '',
     },
 
     {
         id: 'www',
         title: 'Win Without War',
+        isPooling: true,
+        disclaimer: '',
+    },
+
+    {
+        id: 'bordc',
+        title: 'Bill of Rights Defense Committee',
+        isPooling: true,
+        disclaimer: '',
+    },
+
+    {
+        id: 'o98',
+        title: 'The Other 98%',
+        isPooling: true,
+        disclaimer: '',
+    },
+
+    {
+        id: 'ddc',
+        title: 'Democrats.com',
+        isPooling: false,
+        disclaimer: '', // TODO: Add disclaimer
+    },
+
+    {
+        id: 'fp',
+        title: 'Free Press',
+        isPooling: false,
+        disclaimer: '', // TODO: Add disclaimer
+    },
+
+    {
+        id: 'tn',
+        title: 'The Nation',
         isPooling: true,
         disclaimer: '',
     },
@@ -177,7 +261,7 @@ if (ref) {
 }
 
 if (!org) {
-    org = organizations[1];
+    org = organizations[0];
 }
 
 if (!org.isPooling) {
