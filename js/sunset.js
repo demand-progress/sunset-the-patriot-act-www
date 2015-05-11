@@ -14,7 +14,7 @@ document.querySelector('.email_signup form').addEventListener('submit', function
     data.append('hp_enabled', true);
     data.append('tag', tag);
     data.append('org', org.id);
-    data.append('action_comment', 'Please allow Section 215 of the PATRIOT Act to sunset. Our democracy depends on it.');
+    data.append('action_comment', document.querySelector('.overlay.letter p').textContent.trim());
 
     for (var i = 0; i < requiredFields.length; i++) {
         var field = requiredFields[i];
@@ -86,12 +86,13 @@ var bindModalEvents = function(modal) {
 bindModalEvents('twitter_modal');
 bindModalEvents('share_modal');
 bindModalEvents('call_tool');
+bindModalEvents('letter');
 
 var fb = document.querySelectorAll('a.facebook');
 for (var i = 0; i < fb.length; i++) {
     fb[i].addEventListener('click', function(e) {
         e.preventDefault();
-        window.open('https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.breakcongressinternet.com%2F');
+        window.open('https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.sunsetthepatriotact.com%2F');
     }, false);
 }
 
@@ -114,6 +115,12 @@ for (var i = 0; i < ems.length; i++) {
 document.getElementById('twitter_signup_submit').addEventListener('click', function(e) {
     console.log('Twitter signup!');
 }, false);
+
+document.querySelector('.action h4 a.letter').addEventListener('click', function(e) {
+    e.preventDefault();
+
+    modal_show('letter');
+});
 
 document.querySelector('.call_tool form').addEventListener('submit', function(e) {
     e.preventDefault();
