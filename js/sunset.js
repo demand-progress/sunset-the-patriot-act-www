@@ -82,7 +82,6 @@ var bindModalEvents = function(modal) {
         modal_hide(modal.id);
     }.bind(this), false);
 }
-bindModalEvents('twitter_modal');
 bindModalEvents('share_modal');
 bindModalEvents('call_tool');
 bindModalEvents('letter');
@@ -91,7 +90,7 @@ var fb = document.querySelectorAll('a.facebook');
 for (var i = 0; i < fb.length; i++) {
     fb[i].addEventListener('click', function(e) {
         e.preventDefault();
-        window.open('https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.sunsetthepatriotact.com%2F');
+        window.open('https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.sunsetthepatriotact.com%2F%3Fref%3D' + org.id);
     }, false);
 }
 
@@ -99,7 +98,7 @@ var tws = document.querySelectorAll('a.twitter');
 for (var i = 0; i < tws.length; i++) {
     tws[i].addEventListener('click', function(e) {
         e.preventDefault();
-        window.open('https://twitter.com/intent/tweet?text='+encodeURIComponent(TWEET_TEXT));
+        window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(TWEET_TEXT) + org.id);
     }, false);
 }
 
@@ -107,13 +106,9 @@ var ems = document.querySelectorAll('a.email');
 for (var i = 0; i < ems.length; i++) {
     ems[i].addEventListener('click', function(e) {
         e.preventDefault();
-        window.location.href = 'mailto:?subject='+encodeURIComponent(EMAIL_SUBJECT)+'&body=https%3A%2F%2Fwww.askthensa.com%2F';
+        window.location.href = 'mailto:?subject=' + encodeURIComponent(EMAIL_SUBJECT) + '&body=https%3A%2F%2Fwww.sunsetthepatriotact.com%2F';
     }, false);
 }
-
-document.getElementById('twitter_signup_submit').addEventListener('click', function(e) {
-    console.log('Twitter signup!');
-}, false);
 
 document.querySelector('.action h4 a.letter').addEventListener('click', function(e) {
     e.preventDefault();
