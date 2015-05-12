@@ -173,14 +173,14 @@ var organizations = [
         id: 'fftf', // Default
         title: 'Fight for the Future',
         isPooling: false,
-        disclaimer: '<a href="http://www.fightforthefuture.org/" target="_blank">Fight for the Future</a> and <a href="http://www.thecenterforrights.org/">Center for Rights</a> will contact you about future campaigns. <a href="http://www.fightforthefuture.org/privacy/" target="_blank">Privacy Policy</a>.</p>',
+        disclaimer: '<a href="http://www.fightforthefuture.org/" target="_blank">Fight for the Future</a> will contact you about future campaigns. <a href="http://www.fightforthefuture.org/privacy/" target="_blank">Privacy Policy</a>.</p>',
     },
 
     {
         id: 'dp',
         title: 'Demand Progress',
         isPooling: true,
-        disclaimer: '',
+        disclaimer: true,
     },
 
     {
@@ -194,14 +194,14 @@ var organizations = [
         id: 'la',
         title: 'Left Action',
         isPooling: true,
-        disclaimer: '',
+        disclaimer: false,
     },
 
     {
         id: 'ca',
         title: 'CREDO Action',
         isPooling: true,
-        disclaimer: '',
+        disclaimer: true,
     },
 
     {
@@ -215,42 +215,42 @@ var organizations = [
         id: 'ra',
         title: 'RootsAction',
         isPooling: true,
-        disclaimer: '',
+        disclaimer: false,
     },
 
     {
         id: 'dk',
         title: 'Daily Kos',
         isPooling: true,
-        disclaimer: '',
+        disclaimer: true,
     },
 
     {
         id: 'rhrc',
         title: 'RH Reality Check',
         isPooling: true,
-        disclaimer: '',
+        disclaimer: true,
     },
 
     {
         id: 'www',
         title: 'Win Without War',
         isPooling: true,
-        disclaimer: '',
+        disclaimer: true,
     },
 
     {
         id: 'bordc',
         title: 'Bill of Rights Defense Committee',
         isPooling: true,
-        disclaimer: '',
+        disclaimer: true,
     },
 
     {
         id: 'o98',
         title: 'The Other 98%',
         isPooling: true,
-        disclaimer: '',
+        disclaimer: true,
     },
 
     {
@@ -271,7 +271,7 @@ var organizations = [
         id: 'tn',
         title: 'The Nation',
         isPooling: true,
-        disclaimer: '',
+        disclaimer: true,
     },
 ];
 var ref = location.search.match(/ref=([\w-]+)/);
@@ -289,7 +289,11 @@ if (!org) {
     org = organizations[0];
 }
 
-if (!org.isPooling) {
+if (org.isPooling) {
+    if (org.disclaimer === false) {
+        document.querySelector('.disclaimer').remove();
+    }
+} else {
     document.querySelector('.squaredFour').remove();
     document.querySelector('.disclaimer').innerHTML = org.disclaimer;
 }
