@@ -131,13 +131,17 @@ blockquote {
 }
 header {
 }
-header .fight-back {
+header .desktop p {
+    padding-top: 16px;
+}
+
+header .mobile .fight-back {
+    padding-bottom: 48px;
+}
+header p.fight-back {
     color: #A82424;
     padding-top: 12px;
     font-weight: bold;
-}
-header .mobile .fight-back {
-    padding-bottom: 48px;
 }
 header em {
     font-style: italic;
