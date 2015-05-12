@@ -133,8 +133,11 @@ header {
 }
 header .fight-back {
     color: #A82424;
-    padding: 12px 0 0;
+    padding-top: 12px;
     font-weight: bold;
+}
+header .mobile .fight-back {
+    padding-bottom: 48px;
 }
 header em {
     font-style: italic;
@@ -170,6 +173,7 @@ header h2 {
 
 .action h4 {
     font-size: 20px;
+    line-height: 1.2;
 }
 
 .action .email_signup {
@@ -717,4 +721,16 @@ div.social-buttons a.email {
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
     filter: alpha(opacity=100);
     opacity: 1;
+}
+
+@media screen and (min-width: 480px) {
+    .mobile {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 479px) {
+    .desktop {
+        display: none;
+    }
 }
