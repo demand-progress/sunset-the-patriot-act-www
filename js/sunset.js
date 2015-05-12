@@ -39,16 +39,26 @@ document.querySelector('.email_signup form').addEventListener('submit', function
     thanks.clientWidth;
     thanks.style.opacity = 1;
 
-    var url = 'https://queue.fightforthefuture.org/action';
-
-    var xhr = new XMLHttpRequest();
-    xhr.onreadystatechange = function() {
-        if (xhr.readyState === 4) {
-            console.log('response:', xhr.response);
+    // Send to Queue
+    var xhr1 = new XMLHttpRequest();
+    xhr1.onreadystatechange = function() {
+        if (xhr1.readyState === 4) {
+            // console.log('response:', xhr1.response);
         }
     };
-    xhr.open("post", url, true);
-    xhr.send(data);
+    xhr1.open('post', 'https://queue.fightforthefuture.org/action', true);
+    xhr1.send(data);
+
+    // Send to Slide
+    var xhr2 = new XMLHttpRequest();
+    xhr2.onreadystatechange = function() {
+        if (xhr2.readyState === 4) {
+            // console.log(xhr2.response);
+        }
+    };
+    xhr2.open('post', 'https://water-slide.herokuapp.com/purpose/', true);
+    xhr2.send(data);
+
     modal_show('call_tool');
     document.querySelector('input[type=tel]').focus();
 }, false);
