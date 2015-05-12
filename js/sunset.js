@@ -147,6 +147,11 @@ document.querySelector('.call_tool form').addEventListener('submit', function(e)
     var zip = document.getElementById('postcode').value || '';
 
     var phone = document.querySelector('input[type=tel]').value.replace(/[^\d]/g, '');
+
+    if (phone.length < 10) {
+        return alert('Please enter your 10 digit phone number.');
+    }
+
     var url = 'https://dp-call-congress.herokuapp.com/create?campaignId=sunsetthepatriotact&userPhone=' + phone + '&zipcode=' + zip;
     var xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function() {
