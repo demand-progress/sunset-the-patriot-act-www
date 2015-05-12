@@ -14,6 +14,7 @@ document.querySelector('.email_signup form').addEventListener('submit', function
     data.append('hp_enabled', true);
     data.append('tag', tag);
     data.append('org', org.id);
+    data.append('subject', 'Let Section 215 expire');
     data.append('action_comment', document.querySelector('.overlay.letter p').textContent.trim());
 
     for (var i = 0; i < requiredFields.length; i++) {
