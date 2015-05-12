@@ -133,8 +133,10 @@ document.querySelector('.call_tool a.share').addEventListener('click', function(
 document.querySelector('.call_tool form').addEventListener('submit', function(e) {
     e.preventDefault();
 
+    var zip = document.getElementById('postcode').value || '';
+
     var phone = document.querySelector('input[type=tel]').value.replace(/[^\d]/g, '');
-    var url = 'https://dp-call-congress.herokuapp.com/create?campaignId=default&userPhone=' + phone;
+    var url = 'https://dp-call-congress.herokuapp.com/create?campaignId=sunsetthepatriotact&userPhone=' + phone + '&zipcode=' + zip;
     var xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function() {
         if (xhr.readyState === 4) {
