@@ -171,117 +171,118 @@ document.querySelector('.call_tool form').addEventListener('submit', function(e)
 // Organizations
 var organizations = [
     {
-        id: 'fftf', // Default
-        title: 'Fight for the Future',
-        isPooling: false,
-        disclaimer: '<a href="http://www.fightforthefuture.org/" target="_blank">Fight for the Future</a> will contact you about future campaigns. <a href="http://www.fightforthefuture.org/privacy/" target="_blank">Privacy Policy</a>.</p>',
+        "id": "fftf",
+        "title": "Fight for the Future",
+        "isPooling": false,
+        "disclaimer": "<a href=\"http://www.fightforthefuture.org/\" target=\"_blank\">Fight for the Future</a> will contact you about future campaigns. <a href=\"http://www.fightforthefuture.org/privacy/\" target=\"_blank\">Privacy Policy</a>.</p>"
     },
 
     {
-        id: 'dp',
-        title: 'Demand Progress',
-        isPooling: true,
-        disclaimer: true,
+        "id": "dp",
+        "title": "Demand Progress",
+        "isPooling": true,
+        "disclaimer": true
     },
 
     {
-        id: 'dp-ns',
-        title: 'Demand Progress',
-        isPooling: false,
-        disclaimer: 'I will receive updates from <a href="https://demandprogress.org" target="_blank">Demand Progress</a>.',
+        "id": "dp-ns",
+        "title": "Demand Progress",
+        "isPooling": false,
+        "disclaimer": "I will receive updates from <a href=\"https://demandprogress.org\" target=\"_blank\">Demand Progress</a>."
     },
 
     {
-        id: 'la',
-        title: 'Left Action',
-        isPooling: true,
-        disclaimer: false,
+        "id": "la",
+        "title": "Left Action",
+        "isPooling": true,
+        "disclaimer": false
     },
 
     {
-        id: 'ca',
-        title: 'CREDO Action',
-        isPooling: true,
-        disclaimer: true,
+        "id": "ca",
+        "title": "CREDO Action",
+        "isPooling": true,
+        "disclaimer": true
     },
 
     {
-        id: 'ca-ns',
-        title: 'CREDO Action',
-        isPooling: false,
-        disclaimer: 'I will receive updates from <a href="http://credoaction.com" target="_blank">CREDO Action</a>.',
+        "id": "ca-ns",
+        "title": "CREDO Action",
+        "isPooling": false,
+        "disclaimer": "I will receive updates from <a href=\"http://credoaction.com\" target=\"_blank\">CREDO Action</a>."
     },
 
     {
-        id: 'ra',
-        title: 'RootsAction',
-        isPooling: true,
-        disclaimer: false,
+        "id": "ra",
+        "title": "RootsAction",
+        "isPooling": true,
+        "disclaimer": false
     },
 
     {
-        id: 'dk',
-        title: 'Daily Kos',
-        isPooling: true,
-        disclaimer: true,
+        "id": "dk",
+        "title": "Daily Kos",
+        "isPooling": true,
+        "disclaimer": true
     },
 
     {
-        id: 'rhrc',
-        title: 'RH Reality Check',
-        isPooling: true,
-        disclaimer: true,
+        "id": "rhrc",
+        "title": "RH Reality Check",
+        "isPooling": true,
+        "disclaimer": true
     },
 
     {
-        id: 'www',
-        title: 'Win Without War',
-        isPooling: true,
-        disclaimer: true,
+        "id": "www",
+        "title": "Win Without War",
+        "isPooling": true,
+        "disclaimer": true
     },
 
     {
-        id: 'bordc',
-        title: 'Bill of Rights Defense Committee',
-        isPooling: true,
-        disclaimer: true,
+        "id": "bordc",
+        "title": "Bill of Rights Defense Committee",
+        "isPooling": true,
+        "disclaimer": true
     },
 
     {
-        id: 'o98',
-        title: 'The Other 98%',
-        isPooling: true,
-        disclaimer: true,
+        "id": "o98",
+        "title": "The Other 98%",
+        "isPooling": true,
+        "disclaimer": true
     },
 
     {
-        id: 'ddc',
-        title: 'Democrats.com',
-        isPooling: false,
-        disclaimer: 'I will receive updates from <a href="http://www.democrats.com" target="_blank">Democrats.com</a>.',
+        "id": "ddc",
+        "title": "Democrats.com",
+        "isPooling": false,
+        "disclaimer": "I will receive updates from <a href=\"http://www.democrats.com\" target=\"_blank\">Democrats.com</a>."
     },
 
     {
-        id: 'fp',
-        title: 'Free Press',
-        isPooling: false,
-        disclaimer: 'I will receive updates from <a href="http://www.freepress.net" target="_blank">Free Press</a>.',
+        "id": "fp",
+        "title": "Free Press",
+        "isPooling": false,
+        "disclaimer": "I will receive updates from <a href=\"http://www.freepress.net\" target=\"_blank\">Free Press</a>."
     },
 
     {
-        id: 'tn',
-        title: 'The Nation',
-        isPooling: true,
-        disclaimer: true,
+        "id": "tn",
+        "title": "The Nation",
+        "isPooling": true,
+        "disclaimer": true
     },
 
     {
-        id: 'coc',
-        title: 'Color of Change',
-        isPooling: true,
-        disclaimer: true,
-    },
+        "id": "coc",
+        "title": "Color of Change",
+        "isPooling": true,
+        "disclaimer": true
+    }
 ];
+
 var ref = location.search.match(/ref=([\w-]+)/);
 var org;
 if (ref) {
