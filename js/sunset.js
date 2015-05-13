@@ -274,6 +274,13 @@ var organizations = [
         isPooling: true,
         disclaimer: true,
     },
+
+    {
+        id: 'coc',
+        title: 'Color of Change',
+        isPooling: true,
+        disclaimer: true,
+    },
 ];
 var ref = location.search.match(/ref=([\w-]+)/);
 var org;
