@@ -60,8 +60,10 @@ document.querySelector('.email_signup form').addEventListener('submit', function
     xhr2.open('post', 'https://water-slide.herokuapp.com/purpose/', true);
     xhr2.send(data);
 
-    modal_show('call_tool');
-    document.querySelector('input[type=tel]').focus();
+    // modal_show('call_tool');
+    // document.querySelector('input[type=tel]').focus();
+    
+    modal_show('share_modal');
 }, false);
 
 function modal_show(id) {
