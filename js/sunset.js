@@ -1,3 +1,10 @@
+var isIE = navigator.userAgent.match(/MSIE (\d)\./);
+if (isIE) {
+    console.log('Please use a better browser');
+    console.log(isIE);
+}
+
+
 var requiredFields = [
     'first_name',
     'email',
@@ -294,18 +301,25 @@ if (ref) {
     }
 }
 
+function removeNode(target) {
+    var node = document.querySelector(target);
+    node.parentElement.removeChild(node);
+}
+
 var maverick = false;
 if (!org) {
     maverick = true;
     org = organizations[0];
 }
 
+var disclaimer = document.querySelector('.disclaimer');
+var squaredFour = document.querySelector('.squaredFour');
 if (org.isPooling) {
     if (org.disclaimer === false) {
-        document.querySelector('.disclaimer').remove();
+        removeNode('.disclaimer');
     }
 } else {
-    document.querySelector('.squaredFour').remove();
+    removeNode('.squaredFour');
     document.querySelector('.disclaimer').innerHTML = org.disclaimer;
 }
 
