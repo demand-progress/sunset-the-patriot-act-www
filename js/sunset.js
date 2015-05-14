@@ -1,8 +1,11 @@
-var isIE = navigator.userAgent.match(/MSIE (\d)\./);
+var isIE = navigator.userAgent.match(/MSIE (\d+)\./);
 if (isIE) {
-    console.log('Please use a better browser');
-    console.log(isIE);
+    var version = +isIE[1];
+    if (version < 10) {
+        alert('Unfortunately your browser, Internet Explorer ' + version + ', is not supported.\nPlease visit the site with a modern browser like Firefox or Chrome.\nThanks!');
+    }
 }
+
 
 
 var requiredFields = [
