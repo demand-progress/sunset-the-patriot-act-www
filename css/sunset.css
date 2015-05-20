@@ -738,3 +738,22 @@ div.social-buttons a.email {
         display: none;
     }
 }
+
+/* JL NOTE ~ styles added for protest map */
+#map {
+    max-width: 800px;
+    margin: 0px auto;
+    padding: 0px 20px;
+}
+iframe {
+    width: 100%;
+    height: 400px;
+    margin-top: 25px;
+    margin-bottom: 35px;
+}
+section.nopad {
+    padding-bottom: 0px;
+}
+section.nopad div.share {
+    margin-bottom: 10px;
+}
