@@ -28,6 +28,9 @@ a {
     color: #ccc;
     text-decoration: underline;
 }
+a:hover {
+    color: #eee;
+}
 body {
     background: #161616 url(../images/background.jpg) center top no-repeat;
     background-size: 100% auto;
@@ -124,10 +127,16 @@ blockquote {
     font-size: 15.5px;
     color: #aaa;
     font-family: "Courier New", mono;
-    margin-top: 15px;
-    margin-bottom: 60px;
     word-wrap: break-word;
     max-width: calc(100% - 64px);
+    max-width: 800px;
+    text-align: left;
+    color: #eee;
+    line-height: 20px;
+}
+img.demo {
+    max-width: 800px;
+    height: auto;
 }
 header {
 }
@@ -366,7 +375,7 @@ section p {
     line-height: 24px;
     padding: 0 32px;
 }
-header p strong {
+section p strong, header p strong {
     font-weight: bold;
 }
 .share {
