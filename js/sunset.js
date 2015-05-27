@@ -286,11 +286,11 @@ var organizations = [
 
     {
         "id": "fp",
-        "title": "Free Press",
+        "title": "Free Press Action Fund",
         "isPooling": false,
         "showNewPage": true,
         "newCallTool": true,
-        "disclaimer": "I will receive updates from <a href=\"http://www.freepress.net\" target=\"_blank\">Free Press</a>."
+        "disclaimer": "I will receive updates from <a href=\"http://www.freepress.net\" target=\"_blank\">Free Press Action Fund</a>."
     },
 
     {
