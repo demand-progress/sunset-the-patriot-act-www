@@ -841,12 +841,19 @@ section.nopad div.share {
     display: block;
     background: #000;
     text-align: center;
-    height: 78px;
-    line-height: 78px;
-    font-size: 40px;
+    height: 64px;
+    line-height: 64px;
+    font-size: 27.8px;
     text-decoration: none;
-    color: #33e5a8;
+    color: #c7c7c7;
+    text-transform: uppercase;
     box-shadow: 0px 0px 20px rgba(0,0,0, .5);
+}
+.bottom a em {
+    color: #33e5a8;
+}
+.bottom a:hover em {
+    text-decoration: underline;
 }
 @media screen and (max-width: 767px) {
     .bottom a {
