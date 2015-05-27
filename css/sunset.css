@@ -175,8 +175,9 @@ header h2 {
 }
 header ul {
     list-style-type: disc;
-    max-width: 650px;
     margin: 25px auto;
+    max-width: 780px;
+    padding: 0 50px;
 }
 header ul li {
     font-size: 17px;
