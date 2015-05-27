@@ -290,7 +290,7 @@ var render = function() {
                         explanation.className = 'explanation bad';
                         senator.className = 'bad';
                         var span5 = document.createElement('span');
-                        span5.textContent = 'Sen. '+p.last_name+' "wants" to be a a surveillance reformer. Show '+p.last_name+' how to actually do it!';
+                        span5.textContent = 'Sen. '+p.last_name+' wants to *look* like a surveillance reformer. Ask '+p.last_name+' to support real reform!';
                         explanation.appendChild(span5);
                     } else {
                         explanation.className = 'explanation bad';
