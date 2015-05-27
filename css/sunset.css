@@ -839,7 +839,7 @@ section.nopad div.share {
 }
 .bottom a {
     display: block;
-    background: #000;
+    background: #080808;
     text-align: center;
     height: 64px;
     line-height: 64px;
@@ -861,5 +861,8 @@ section.nopad div.share {
         height: auto;
         line-height: 25px;
         font-size: 20px;
+    }
+    .bottom img {
+        display: none;
     }
 }
