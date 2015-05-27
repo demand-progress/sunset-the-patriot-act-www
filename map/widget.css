@@ -157,7 +157,8 @@ label.choose_state {
     /* background: #032; */
 }
 .senators > div ul.votes {
-    margin-top: 10px;
+    position: absolute;
+    bottom: 10px;
 }
 .senators > div ul.votes li {
     font-size: 15px;

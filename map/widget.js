@@ -268,17 +268,24 @@ var render = function() {
                     senator.appendChild(img);
 
                     var explanation = document.createElement('div');
-                    if (p.vote_tempreauth == 'YEA') {
+                    if (p.last_name == 'McConnell') {
                         explanation.className = 'explanation bad';
                         senator.className = 'bad';
                         var span5 = document.createElement('span');
-                        span5.textContent = 'Sen. '+p.last_name+' voted to allow the NSA to continue engaging in warantless mass surveillance of virtually all domestic communications records. Take action to let '+p.last_name+' know you disagree!';
+                        span5.textContent = 'Mitch McConnell loves NSA mass surveillance. He only voted against PATRIOT Act so he could get a re-vote.';
+                        explanation.appendChild(span5);
+                    }
+                    else if (p.vote_tempreauth == 'YEA' && p.vote_usaf == 'NAY') {
+                        explanation.className = 'explanation bad';
+                        senator.className = 'bad';
+                        var span5 = document.createElement('span');
+                        span5.textContent = 'Based on these votes, Sen '+p.last_name+' wants to continue mass surveillance.';
                         explanation.appendChild(span5);
                     } else if (p.vote_tempreauth == 'NAY' && p.vote_usaf == 'NAY') {
                         explanation.className = 'explanation good';
                         senator.className = 'good';
                         var span5 = document.createElement('span');
-                        span5.textContent = 'Sen. '+p.last_name+' voted to sunset the PATRIOT Act and block any extension of the NSA\'s warantless mass surveillance programs. Show your support!';
+                        span5.textContent = 'Perfect score. Sen. '+p.last_name+' is a hero — encourage '+p.last_name+' to filibuster on Sunday!';
                         explanation.appendChild(span5);
                     } else if (p.vote_tempreauth == 'NAY' && p.vote_usaf == 'YEA') {
                         explanation.className = 'explanation bad';
@@ -286,6 +293,13 @@ var render = function() {
                         var span5 = document.createElement('span');
                         span5.textContent = 'Sen. '+p.last_name+' "wants" to be a a surveillance reformer. Show '+p.last_name+' how to actually do it!';
                         explanation.appendChild(span5);
+                    } else {
+                        explanation.className = 'explanation bad';
+                        senator.className = 'bad';
+                        var span5 = document.createElement('span');
+                        span5.textContent = 'With votes like these, Sen '+p.last_name+' wants to continue the Patriot Act no matter what.';
+                        explanation.appendChild(span5);
+
                     }
                     senator.appendChild(explanation);
 
