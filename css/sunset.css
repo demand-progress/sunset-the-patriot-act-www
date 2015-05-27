@@ -342,6 +342,9 @@ section {
     background: #282828;
     padding: 10px 0px 25px 0px;
 }
+section.dark {
+    background: #171717;
+}
 section h2 {
     font-weight: 300;
     margin-top: 45px;

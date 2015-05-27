@@ -34,31 +34,36 @@ label.choose_state {
     display: block;
 }
 .senators {
-    display: none;
+    
 }
 .senators > div {
-    width: 225px;
+    width: 320px;
+    height: 180px;
     display: inline-block;
     vertical-align: top;
     margin: 25px 35px 0px 35px;
+    box-sizing: border-box;
+    position: relative;
+    border-radius: 10px;
+    background: #222222;
+    padding-left: 160px;
 }
 .senators > div .img {
     display: block;
-    position: relative;
-    width: 225px;
-    height: 225px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+
+    width: 143px;
+    height: 180px;
+    background-size: auto 180px;
     background-position: center center;
-    -webkit-border-top-left-radius: 10px;
-    -webkit-border-top-right-radius: 10px;
-    -moz-border-radius-topleft: 10px;
-    -moz-border-radius-topright: 10px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    border-radius: 10px;
 }
 .senators > div .img ul {
     width: 100%;
     height: 100%;
-    padding: 15px;
+    padding: 10px 0px 15px 10px;
 
     -webkit-transition: background 0.4s ease-out;
             transition: background 0.4s ease-out;
@@ -76,17 +81,28 @@ label.choose_state {
 .senators > div .img ul li {
     text-align: left;
     font-size: 25px;
-    padding: 0px 0px 15px 0px;
+    margin-left: -40px;
+    padding: 0px 0px 10px 0px;
+    text-shadow: 0px 1px 1px black;
+    -webkit-transition: margin-left 0.4s ease-out;
+            transition: margin-left 0.4s ease-out;
+}
+.senators > div .img ul:hover li {
+    margin-left: -40px;
 }
 .senators > div .img ul li a {
     color: white;
     opacity: .85;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .senators > div .img ul li a:hover {
     opacity: 1;
 }
 .senators > div .img ul li a span {
-    font-size: 20px;
+    font-size: 15px;
+    vertical-align: middle;
     opacity: 0;
     -webkit-transition: opacity 0.4s ease-out;
             transition: opacity 0.4s ease-out;
@@ -95,7 +111,12 @@ label.choose_state {
     opacity: 1;
 }
 .senators > div .img ul li i {
-    margin: 0px 10px 0px 0px;
+    margin: 0px 20px 0px 0px;
+    -webkit-transition: opacity 0.4s ease-out;
+        transition: opacity 0.4s ease-out;
+}
+.senators > div .img ul:hover li i {
+    /*opacity: 0;*/
 }
 .senators > div .img ul li .fa-envelope {
     font-size: .85em;
@@ -116,12 +137,18 @@ label.choose_state {
     position: absolute;
     left: 0px;
     bottom: 0px;
-    width: 225px;
-    font-size: 18px;
+    width: 100%;
+    font-size: 14px;
     color: white;
     padding: 5px 0px;
     margin: 0px;
     background: rgba(0, 0, 0, .5);
+    -webkit-border-bottom-right-radius: 10px;
+    -webkit-border-bottom-left-radius: 10px;
+    -moz-border-radius-bottomright: 10px;
+    -moz-border-radius-bottomleft: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
 }
 .senators > div.bad h4 {
     /* background: #300; */
@@ -129,41 +156,39 @@ label.choose_state {
 .senators > div.good h4 {
     /* background: #032; */
 }
+.senators > div ul.votes {
+    margin-top: 10px;
+}
 .senators > div ul.votes li {
-    font-size: 18px;
-    padding: 15px;
+    font-size: 15px;
+    color: white;
+    padding: 5px 0px 5px 25px;
+    text-align: left;
 }
 .senators > div ul.votes li.bad {
-    background: #ccc;
-    color: #d44;
+    background: url(/images/bad.png) left center no-repeat;
 }
 .senators > div ul.votes li.bad a {
-    color: #d44;
+    
 }
 .senators > div ul.votes li.good {
-    background: #ccc;
-    color: #484;
+    background: url(/images/neutral.png) left center no-repeat;   
 }
 .senators > div ul.votes li.good a {
-    color: #484;
+    
 }
 .senators > div ul.votes li:last-child {
 
 }
 
 .senators > div .explanation {
-    margin: 0px 0px 25px 0px;
-    background: #ccc;
-    color: #333;
-    padding: 10px 15px 15px 15px;
-    font-size: 15px;
+    
+    
+    text-align: left;
+    padding: 10px 10px 0px 0px;
+    font-size: 14px;
     line-height: 20px;
-    -webkit-border-bottom-right-radius: 10px;
-    -webkit-border-bottom-left-radius: 10px;
-    -moz-border-radius-bottomright: 10px;
-    -moz-border-radius-bottomleft: 10px;
-    border-bottom-right-radius: 10px;
-    border-bottom-left-radius: 10px;
+    color: #cecece;
 }
 .senators > div .explanation a {
     color: black;

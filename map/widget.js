@@ -168,11 +168,13 @@ var render = function() {
     var statesDivs = document.createElement('div');
     statesDivs.className = 'states';
 
+    /*
     var label = document.createElement('label');
     label.htmlFor = 'choose_state';
     label.className = 'choose_state';
     label.textContent = 'Choose your state:';
     frag.appendChild(label);
+    */
 
     var select = document.createElement('select');
     select.id = 'choose_state'
@@ -207,7 +209,7 @@ var render = function() {
                     img.style.backgroundImage = 'url(/map/congress/'+p.image+')';
                     img.style.backgroundSize = '225px 275px';
                     var h4 = document.createElement('h4');
-                    h4.textContent = 'Sen. '+p.first_name+' '+p.last_name;
+                    h4.textContent = ''+p.first_name+' '+p.last_name;
                     img.appendChild(h4);
 
                     var ul2 = document.createElement('ul');
@@ -265,55 +267,6 @@ var render = function() {
 
                     senator.appendChild(img);
 
-                    var ul = document.createElement('ul');
-                    ul.className = 'votes';
-
-                    var li1 = document.createElement('li');
-                    var span1 = document.createElement('span');
-                    span1.textContent= 'Voted ';
-                    li1.appendChild(span1);
-                    var strong1 = document.createElement('strong');
-                    if (p.vote_tempreauth == 'NAY') {
-                        li1.className = 'good';
-                        strong1.textContent = 'NO';
-                    } else {
-                        li1.className = 'bad';
-                        strong1.textContent = 'YES';
-                    }
-                    li1.appendChild(strong1);
-                    var span2 = document.createElement('span');
-                    span2.textContent = ' on ';
-                    li1.appendChild(span2);
-                    var a1 = document.createElement('a');
-                    a1.href = '#patriot';
-                    a1.textContent = 'PATRIOT Act extension';
-                    li1.appendChild(a1);
-                    ul.appendChild(li1);
-
-                    var li2 = document.createElement('li');
-                    var span3 = document.createElement('span');
-                    span3.textContent = 'Voted ';
-                    li2.appendChild(span3);
-                    var strong2 = document.createElement('strong');
-                    if (p.vote_usaf == 'NAY') {
-                        li2.className = 'good';
-                        strong2.textContent = 'NO';
-                    } else {
-                        li2.className = 'bad';
-                        strong2.textContent = 'YES';
-                    }
-                    li2.appendChild(strong2);
-                    var span4 = document.createElement('span');
-                    span4.textContent = ' on ';
-                    li2.appendChild(span4);
-                    var a2 = document.createElement('a');
-                    a2.href = '#usaf';
-                    a2.textContent = 'USA Freedom Act';
-                    li2.appendChild(a2);
-                    ul.appendChild(li2);
-
-                    senator.appendChild(ul);
-
                     var explanation = document.createElement('div');
                     if (p.vote_tempreauth == 'YEA') {
                         explanation.className = 'explanation bad';
@@ -331,18 +284,38 @@ var render = function() {
                         explanation.className = 'explanation bad';
                         senator.className = 'bad';
                         var span5 = document.createElement('span');
-                        span5.textContent = 'Sen. '+p.last_name+' voted for the USA Freedom Act, a fake reform bill that won\'t stop mass surveillance and ';
+                        span5.textContent = 'Sen. '+p.last_name+' "wants" to be a a surveillance reformer. Show '+p.last_name+' how to actually do it!';
                         explanation.appendChild(span5);
-                        var a3 = document.createElement('a');
-                        a3.textContent = 'opens up new avenues for more invasive spying';
-                        a3.href = 'http://thehill.com/blogs/congress-blog/homeland-security/242736-no-congress-did-not-just-vote-to-end-nsa-spying';
-                        a3.target = '_blank';
-                        explanation.appendChild(a3);
-                        var span6 = document.createElement('span');
-                        span6.textContent = '.';
-                        explanation.appendChild(span6);
                     }
                     senator.appendChild(explanation);
+
+                    var ul = document.createElement('ul');
+                    ul.className = 'votes';
+
+                    var li1 = document.createElement('li');
+                    var strong1 = document.createElement('strong');
+                    strong1.textContent = 'PATRIOT ACT';
+                    if (p.vote_tempreauth == 'NAY') {
+                        li1.className = 'good';
+                    } else {
+                        li1.className = 'bad';
+                        
+                    }
+                    li1.appendChild(strong1);
+                    ul.appendChild(li1);
+
+                    var li2 = document.createElement('li');
+                    var strong2 = document.createElement('strong');
+                    strong2.textContent = 'USAF';
+                    if (p.vote_usaf == 'NAY') {
+                        li2.className = 'good';
+                    } else {
+                        li2.className = 'bad';
+                    }
+                    li2.appendChild(strong2);
+                    ul.appendChild(li2);
+
+                    senator.appendChild(ul);
 
                     senators.appendChild(senator);
 
