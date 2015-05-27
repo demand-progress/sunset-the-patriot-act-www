@@ -315,7 +315,7 @@ if (ref) {
         if (ref[1] === organizations[i].id) {
             org = organizations[i];
             if (!org.showNewPage && window.location.href.indexOf('/action') == -1)
-                window.location.href = '/action?ref='+org.id;
+                window.location.replace('/action?ref='+org.id);
             break;
         }
     }
