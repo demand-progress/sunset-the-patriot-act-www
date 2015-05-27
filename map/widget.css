@@ -48,7 +48,7 @@ label.choose_state {
     box-sizing: border-box;
     position: relative;
     border-radius: 10px;
-    background: #222222;
+    background: #111;
     padding-left: 160px;
 }
 .senators > div .img {
