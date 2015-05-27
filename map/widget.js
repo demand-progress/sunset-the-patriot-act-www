@@ -136,7 +136,7 @@ xhr2.onreadystatechange = function() {
         if (res.subdivisions && res.subdivisions.length > 0)
             userState = res.subdivisions[0].iso_code;
         else
-            userState = 'unknown';
+            userState = 'KY';
 
         checkFinishedLoadingData();
     }
