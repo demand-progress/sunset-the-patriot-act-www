@@ -368,7 +368,27 @@ var render = function() {
                 infoWindow.open(map, marker);
                 currentInfoWindow = infoWindow;
             });
-        }
+        };
+        var bindButtonAction = function(button, address, p) {
+            button.addEventListener('click', function(e) {
+                if (modal_show) {
+                    modal_show('drop_in');
+                    var name = (p.organization == 'Senate' ? 'Sen.' : 'Rep.')+' '+p.last_name;
+                    document.getElementById('drop_in_header').textContent = 'Drop in on '+name+'!';
+                    var addr = document.getElementById('drop_in_address');
+                    while (addr.firstChild) {
+                        addr.removeChild(addr.firstChild);
+                    }
+                    addr.appendChild(address);
+                    var at = '';
+                    var ps = address.querySelectorAll('p');
+                    for (var i = 0; i < ps.length; i++) {
+                        at += ps[i].textContent+'\n';
+                    }
+                    document.getElementById('get_directions').href = 'https://www.google.com/maps/place/'+encodeURIComponent(at.replace('\n', ' '));
+                }
+            }, false);
+        };
         var closeCurrentInfoWindow = function() {
             if (currentInfoWindow) {
                 currentInfoWindow.close();
@@ -408,19 +428,26 @@ var render = function() {
                             title: 'test'
                         });
 
+                        var adiv = document.createElement('div');
+
                         var div = document.createElement('div');
                         div.className = 'infowindow';
                         var h4 = document.createElement('h4');
                         h4.textContent = (p.organization == 'Senate' ? 'Sen. ' : 'Rep. ') + p.first_name + ' ' + p.last_name;
-                        div.appendChild(h4);
+                        adiv.appendChild(h4);
 
                         var address = p['office'+j].split('\n');
                         for (var k = 0; k < address.length; k++) {
                             var pa = document.createElement('p');
                             pa.textContent = address[k];
-                            div.appendChild(pa);
+                            adiv.appendChild(pa);
                         }
+                        div.appendChild(adiv);
 
+                        var button = document.createElement('button');
+                        button.textContent = 'I\'m going!';
+                        div.appendChild(button);
+                        bindButtonAction(button, adiv.cloneNode(true), p);
                         bindInfoWindow(marker, div);
                         markers.push(marker);
                     }

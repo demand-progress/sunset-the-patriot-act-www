@@ -637,12 +637,36 @@ section .share {
 .overlay.call_tool .modal button:hover {
     background: #26b984;
 }
-#battle .overlay .modal p {
-    color: #444;
-    max-width: 500px;
-    margin: 0px auto;
-    padding: 30px 25px;
-    font-size: 18px;
+.overlay .modal p.address h4 {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: left;
+    color: gray;
+    margin-bottom: 3px;
+    padding: 0px;
+}
+.overlay .modal p.address p {
+    padding: 0px;
+}
+.overlay .modal p.address p {
+    text-align: left;
+}
+.overlay .modal div.keep_in_mind {
+}
+.overlay .modal div.keep_in_mind a {
+    color: #44f;
+}
+.overlay .modal div.keep_in_mind a:hover {
+    color: #22a;
+}
+.overlay .modal div.keep_in_mind #get_directions {
+    display: block;
+    text-align: left;
+}
+.overlay .modal div.keep_in_mind p.blurb {
+    margin-top: 25px;
+    text-align: left;
+    padding-bottom: 20px;
 }
 @media screen and (max-width: 767px) {
     .overlay .modal h1 {

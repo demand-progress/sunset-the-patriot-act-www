@@ -22,6 +22,27 @@
     text-align: left;
     line-height: 21px;
 }
+#map-canvas .infowindow button {
+    display: inline-block;
+    text-decoration: none;
+    border: 0px;
+    background: #fe4b60;
+    height: 40px;
+    line-height: 40px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: white;
+    font-weight: bold;
+    font-size: 19px;
+    text-align: center;
+    cursor: pointer;
+    margin: 10px 0px;
+    border-radius: 5px;
+    padding: 0px 15px;
+}
+#map-canvas .infowindow button:hover {
+    background: #ee3b50;
+}
 label.choose_state {
     color: white;
     margin-right: 10px;

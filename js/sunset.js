@@ -98,6 +98,8 @@ function modal_hide(id) {
 
 var bindModalEvents = function(modal) {
     modal = document.getElementById(modal);
+    if (!modal)
+        return;
     modal.querySelector('.gutter').addEventListener('click', function(e) {
         if (e.target === e.currentTarget) {
             e.preventDefault();
@@ -114,6 +116,7 @@ bindModalEvents('share_modal');
 bindModalEvents('call_tool');
 bindModalEvents('call_tool_script');
 bindModalEvents('letter');
+bindModalEvents('drop_in');
 
 var fb = document.querySelectorAll('a.facebook');
 for (var i = 0; i < fb.length; i++) {
