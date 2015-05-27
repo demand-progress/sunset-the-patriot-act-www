@@ -259,7 +259,7 @@ var render = function() {
 
                         at.addEventListener('click', function(e) {
                             e.preventDefault();
-                            var username = at.href.substr(20);
+                            var username = this.href.substr(20);
                             window.open('https://twitter.com/intent/tweet?text='+encodeURIComponent(".@"+username+TWEET_TO_TEXT));
                         }, false);
                     }
