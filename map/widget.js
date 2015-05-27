@@ -162,7 +162,6 @@ var checkFinishedLoadingData = function() {
 }
 
 var render = function() {
-    console.log('do render: ', userState, politicians);
     var frag = document.createDocumentFragment();
 
     var statesDivs = document.createElement('div');
@@ -396,13 +395,10 @@ var render = function() {
                 continue;
 
             if (p.state_short == cur) {
-                console.log(p);
 
                 for (var j = 1; j <= 8; j++) {
-                    console.log('office'+j+'geo', p['office'+j+'geo']);
                     if (p['office'+j+'geo']) {
                         var latLng = p['office'+j+'geo'].split(',');
-                        console.log(latLng);
                         var position = new google.maps.LatLng(latLng[0], latLng[1]);
 
                         // Create Marker
