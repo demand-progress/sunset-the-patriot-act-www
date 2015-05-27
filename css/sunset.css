@@ -424,7 +424,7 @@ section .share {
     background-color: #3089ef;
 }
 .logos {
-    margin: 50px 0px; 
+    margin: 50px 0px 0px 0px; 
     overflow: hidden;
 }
 .logos a {
@@ -447,7 +447,7 @@ section .share {
     font-size: 22px;
     color: #999;
     font-weight: 100;
-    padding: 0 32px 70px;
+    padding: 0 32px 120px 32px;
 }
 .press a {
     color: #bbb;
