@@ -354,3 +354,6 @@ function onResize() {
         modals[i].style.maxHeight = innerHeight + 'px';
     }
 }
+
+if (window.location.href.indexOf('dropoff=1') != -1)
+    window.location.href = '#dropoff';
