@@ -365,3 +365,5 @@ function directOpenCallModal() {
     document.getElementById('call_header').textContent = 'Enter your phone number and we\'ll connect you.';
     modal_show('call_tool');
 }
+if (window.location.href.indexOf('call=1') != -1)
+    directOpenCallModal()
