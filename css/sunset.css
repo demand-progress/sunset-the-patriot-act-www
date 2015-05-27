@@ -61,7 +61,7 @@ h3 {
     letter-spacing: 3px;
     text-transform: uppercase;
     text-align: center;
-    margin: 15px 0px 45px 0px;
+    margin: 15px 0px 25px 0px;
 }
 h4 {
     text-align: center;
@@ -223,7 +223,9 @@ header ul li {
     opacity: 0;
 }
 .action .email_signup input {
-    width: 100%;
+    width: 50%;
+    vertical-align: top;
+    box-sizing: border-box;
     height: 60px;
     border: 0px;
     line-height: 60px;
@@ -231,6 +233,7 @@ header ul li {
     font-size: 25px;
     font-family: "Open Sans";
     font-weight: 100;
+    border-right: 1px solid #ccc;
     border-top: 1px solid #ccc;
 }
 .action .email_signup input:nth-of-type(1) {
@@ -238,6 +241,7 @@ header ul li {
 }
 @media screen and (max-width: 480px) {
     .action .email_signup input {
+        width: 100%;
         font-size: 18px;
     }
 }
@@ -293,6 +297,26 @@ button {
     cursor: pointer;
     font-weight: 500;
     font-family: "Open Sans";
+}
+a.btn {
+    display: inline-block;
+    text-decoration: none;
+    border: 0px;
+    background: #fe4b60;
+    height: 58px;
+    line-height: 56px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: white;
+    font-weight: bold;
+    font-size: 19px;
+    text-align: center;
+    width: 226px;
+    cursor: pointer;
+    margin: 25px 0px;
+}
+a.btn:hover {
+    background: #ee3b50;
 }
 p.explanation {
     color: #999;
@@ -557,7 +581,7 @@ section .share {
 }
 .overlay.call_tool .modal a.share {
     background-color: transparent;
-    color: #bbb;
+    color: #666;
     font-size: 12px;
     margin: 0 0 12px;
     padding: 0;
@@ -761,20 +785,28 @@ div.social-buttons a.email {
 }
 
 /* JL NOTE ~ styles added for protest map */
-#map {
-    max-width: 800px;
-    margin: 0px auto;
-    padding: 0px 20px;
-}
-iframe {
-    width: 100%;
-    height: 400px;
-    margin-top: 25px;
-    margin-bottom: 35px;
-}
 section.nopad {
     padding-bottom: 0px;
 }
 section.nopad div.share {
     margin-bottom: 10px;
+}
+#gallery {
+    max-width: 800px;
+    margin: 0px auto;
+}
+#gallery iframe {
+    height: 565px;
+}
+.flyer {
+    font-weight: bold;
+    font-family: "Open Sans";
+    font-size: 29px;
+    text-transform: uppercase;
+    color: white;
+    margin: 0 0 25px 0; 
+}
+.flyer a {
+    color: #33e5a8;
+    text-decoration: underline;
 }

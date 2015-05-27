@@ -169,7 +169,10 @@ document.querySelector('.call_tool form').addEventListener('submit', function(e)
         return alert('Please enter your 10 digit phone number.');
     }
 
-    var url = 'https://dp-call-congress.herokuapp.com/create?campaignId=sunsetthepatriotact&userPhone=' + phone + '&zipcode=' + zip;
+    if (org.newCallTool)
+        var url = 'https://call-congress.fightforthefuture.org/create?campaignId=endsurveillance&userPhone=' + phone + '&zipcode=' + zip;
+    else
+        var url = 'https://dp-call-congress.herokuapp.com/create?campaignId=sunsetthepatriotact&userPhone=' + phone + '&zipcode=' + zip;
     var xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function() {
         if (xhr.readyState === 4) {
@@ -190,6 +193,8 @@ var organizations = [
         "id": "fftf",
         "title": "Fight for the Future",
         "isPooling": false,
+        "showNewPage": true,
+        "newCallTool": true,
         "disclaimer": "<a href=\"http://www.fightforthefuture.org/\" target=\"_blank\">Fight for the Future</a> will contact you about future campaigns. <a href=\"http://www.fightforthefuture.org/privacy/\" target=\"_blank\">Privacy Policy</a>.</p>"
     },
 
@@ -204,6 +209,8 @@ var organizations = [
         "id": "dp-ns",
         "title": "Demand Progress",
         "isPooling": false,
+        "showNewPage": true,
+        "newCallTool": true,
         "disclaimer": "I will receive updates from <a href=\"https://demandprogress.org\" target=\"_blank\">Demand Progress</a>."
     },
 
@@ -281,6 +288,8 @@ var organizations = [
         "id": "fp",
         "title": "Free Press",
         "isPooling": false,
+        "showNewPage": true,
+        "newCallTool": true,
         "disclaimer": "I will receive updates from <a href=\"http://www.freepress.net\" target=\"_blank\">Free Press</a>."
     },
 
@@ -305,6 +314,8 @@ if (ref) {
     for (var i = 0; i < organizations.length; i++) {
         if (ref[1] === organizations[i].id) {
             org = organizations[i];
+            if (!org.showNewPage && window.location.href.indexOf('/action') == -1)
+                window.location.href = '/action?ref='+org.id;
             break;
         }
     }
