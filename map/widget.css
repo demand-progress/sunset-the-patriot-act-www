@@ -4,7 +4,7 @@
 #map-canvas {
     max-width: 800px;
     margin: 25px auto 0px auto;
-    height: 400px;
+    height: 350px;
 }
 #map-canvas .infowindow h4 {
     color: black;
