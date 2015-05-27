@@ -341,9 +341,9 @@ var render = function() {
             statesDivs.appendChild(state);
         }
     }
-    frag.appendChild(select);
     frag.appendChild(statesDivs);
 
+    document.getElementById('select_region').appendChild(select);
     document.getElementById('map').appendChild(frag);
 
     canvas = document.getElementById('map-canvas');
