@@ -52,7 +52,7 @@ h1 {
 h2 {
     font-family: "Open Sans";
     color: #f0d88d;
-    font-size: 56px;
+    font-size: 45px;
     font-weight: bold;
     text-transform: uppercase;
     text-align: center;
@@ -807,6 +807,9 @@ section.nopad {
 }
 section.nopad div.share {
     margin-bottom: 10px;
+}
+h3.nopad {
+    margin-bottom: 0px;
 }
 #gallery {
     max-width: 800px;
