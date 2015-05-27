@@ -863,6 +863,7 @@ h3.nopad {
     left: 0px;
     width: 100%;
     z-index: 9001;
+    border-top: 2px solid #333;
 }
 .bottom a {
     display: block;
