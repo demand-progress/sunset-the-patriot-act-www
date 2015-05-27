@@ -28,6 +28,9 @@ a {
     color: #ccc;
     text-decoration: underline;
 }
+a.tweet {
+    text-decoration: none;
+}
 a:hover {
     color: #eee;
 }
