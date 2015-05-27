@@ -357,3 +357,8 @@ function onResize() {
 
 if (window.location.href.indexOf('dropoff=1') != -1)
     window.location.href = '#dropoff';
+
+function directOpenCallModal() {
+    document.getElementById('call_header').textContent = 'Enter your phone number and we\'ll connect you.';
+    modal_show('call_tool');
+}

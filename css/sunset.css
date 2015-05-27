@@ -830,3 +830,29 @@ section.nopad div.share {
 .flyer a:hover {
     color: #13c588;
 }
+.bottom {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: 9001;
+}
+.bottom a {
+    display: block;
+    background: #000;
+    text-align: center;
+    height: 78px;
+    line-height: 78px;
+    font-size: 40px;
+    text-decoration: none;
+    color: #33e5a8;
+    box-shadow: 0px 0px 20px rgba(0,0,0, .5);
+}
+@media screen and (max-width: 767px) {
+    .bottom a {
+        padding: 10px 0px;
+        height: auto;
+        line-height: 25px;
+        font-size: 20px;
+    }
+}
