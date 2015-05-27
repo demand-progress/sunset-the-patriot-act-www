@@ -137,6 +137,7 @@ blockquote {
 img.demo {
     max-width: 800px;
     height: auto;
+    margin-bottom: 10px;
 }
 header {
 }
