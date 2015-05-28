@@ -411,8 +411,8 @@ var render = function() {
             var p = politicians[i];
 
             // JL HACK ~ all house data is fvcked
-            if (p.organization == 'House')
-                continue;
+            // if (p.organization == 'House')
+            //    continue;
 
             if (p.state_short == cur) {
 
