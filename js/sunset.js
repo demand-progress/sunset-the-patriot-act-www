@@ -1,3 +1,154 @@
+(function() { // Begin closure
+    
+
+
+
+
+// Organizations
+var organizations = [
+    {
+        "id": "fftf",
+        "title": "Fight for the Future",
+        "isPooling": false,
+        "showNewPage": true,
+        "newCallTool": true,
+        "disclaimer": "<a href=\"http://www.fightforthefuture.org/\" target=\"_blank\">Fight for the Future</a> will contact you about future campaigns. <a href=\"http://www.fightforthefuture.org/privacy/\" target=\"_blank\">Privacy Policy</a>.</p>"
+    },
+
+    {
+        "id": "dp",
+        "title": "Demand Progress",
+        "isPooling": true,
+        "disclaimer": true
+    },
+
+    {
+        "id": "dp-ns",
+        "title": "Demand Progress",
+        "isPooling": false,
+        "showNewPage": true,
+        "newCallTool": true,
+        "disclaimer": "I will receive updates from <a href=\"https://demandprogress.org\" target=\"_blank\">Demand Progress</a>."
+    },
+
+    {
+        "id": "la",
+        "title": "Left Action",
+        "isPooling": true,
+        "disclaimer": false
+    },
+
+    {
+        "id": "ca",
+        "title": "CREDO Action",
+        "isPooling": true,
+        "disclaimer": true
+    },
+
+    {
+        "id": "ca-ns",
+        "title": "CREDO Action",
+        "isPooling": false,
+        "disclaimer": "I will receive updates from <a href=\"http://credoaction.com\" target=\"_blank\">CREDO Action</a>."
+    },
+
+    {
+        "id": "ra",
+        "title": "RootsAction",
+        "isPooling": true,
+        "disclaimer": false
+    },
+
+    {
+        "id": "dk",
+        "title": "Daily Kos",
+        "isPooling": true,
+        "disclaimer": true
+    },
+
+    {
+        "id": "rhrc",
+        "title": "RH Reality Check",
+        "isPooling": true,
+        "disclaimer": true
+    },
+
+    {
+        "id": "www",
+        "title": "Win Without War",
+        "isPooling": true,
+        "disclaimer": true
+    },
+
+    {
+        "id": "bordc",
+        "title": "Bill of Rights Defense Committee",
+        "isPooling": true,
+        "disclaimer": true
+    },
+
+    {
+        "id": "o98",
+        "title": "The Other 98%",
+        "isPooling": true,
+        "disclaimer": true
+    },
+
+    {
+        "id": "ddc",
+        "title": "Democrats.com",
+        "isPooling": false,
+        "disclaimer": "I will receive updates from <a href=\"http://www.democrats.com\" target=\"_blank\">Democrats.com</a>."
+    },
+
+    {
+        "id": "fp",
+        "title": "Free Press Action Fund",
+        "isPooling": false,
+        "showNewPage": true,
+        "newCallTool": true,
+        "disclaimer": "I will receive updates from <a href=\"http://www.freepress.net\" target=\"_blank\">Free Press Action Fund</a>."
+    },
+
+    {
+        "id": "tn",
+        "title": "The Nation",
+        "isPooling": true,
+        "disclaimer": true
+    },
+
+    {
+        "id": "coc",
+        "title": "Color of Change",
+        "isPooling": true,
+        "disclaimer": true
+    }
+];
+
+var ref = location.search.match(/ref=([\w-]+)/);
+var org;
+if (ref) {
+    for (var i = 0; i < organizations.length; i++) {
+        if (ref[1] === organizations[i].id) {
+            org = organizations[i];
+            break;
+        }
+    }
+}
+
+var maverick = false;
+if (!org) {
+    maverick = true;
+    org = organizations[0];
+}
+
+if ((typeof org.showNewPage === 'undefined' || !org.showNewPage) && window.location.href.indexOf('/action') == -1) {
+    window.location.replace('/action/?ref='+org.id);
+    return;
+}
+
+
+
 // Check for outdated browsers
 var isIE = navigator.userAgent.match(/MSIE (\d+)\./);
 if (isIE) {
@@ -189,150 +340,9 @@ document.querySelector('.call_tool form').addEventListener('submit', function(e)
     modal_show('call_tool_script');
 }, false);
 
-
-// Organizations
-var organizations = [
-    {
-        "id": "fftf",
-        "title": "Fight for the Future",
-        "isPooling": false,
-        "showNewPage": true,
-        "newCallTool": true,
-        "disclaimer": "<a href=\"http://www.fightforthefuture.org/\" target=\"_blank\">Fight for the Future</a> will contact you about future campaigns. <a href=\"http://www.fightforthefuture.org/privacy/\" target=\"_blank\">Privacy Policy</a>.</p>"
-    },
-
-    {
-        "id": "dp",
-        "title": "Demand Progress",
-        "isPooling": true,
-        "disclaimer": true
-    },
-
-    {
-        "id": "dp-ns",
-        "title": "Demand Progress",
-        "isPooling": false,
-        "showNewPage": true,
-        "newCallTool": true,
-        "disclaimer": "I will receive updates from <a href=\"https://demandprogress.org\" target=\"_blank\">Demand Progress</a>."
-    },
-
-    {
-        "id": "la",
-        "title": "Left Action",
-        "isPooling": true,
-        "disclaimer": false
-    },
-
-    {
-        "id": "ca",
-        "title": "CREDO Action",
-        "isPooling": true,
-        "disclaimer": true
-    },
-
-    {
-        "id": "ca-ns",
-        "title": "CREDO Action",
-        "isPooling": false,
-        "disclaimer": "I will receive updates from <a href=\"http://credoaction.com\" target=\"_blank\">CREDO Action</a>."
-    },
-
-    {
-        "id": "ra",
-        "title": "RootsAction",
-        "isPooling": true,
-        "disclaimer": false
-    },
-
-    {
-        "id": "dk",
-        "title": "Daily Kos",
-        "isPooling": true,
-        "disclaimer": true
-    },
-
-    {
-        "id": "rhrc",
-        "title": "RH Reality Check",
-        "isPooling": true,
-        "disclaimer": true
-    },
-
-    {
-        "id": "www",
-        "title": "Win Without War",
-        "isPooling": true,
-        "disclaimer": true
-    },
-
-    {
-        "id": "bordc",
-        "title": "Bill of Rights Defense Committee",
-        "isPooling": true,
-        "disclaimer": true
-    },
-
-    {
-        "id": "o98",
-        "title": "The Other 98%",
-        "isPooling": true,
-        "disclaimer": true
-    },
-
-    {
-        "id": "ddc",
-        "title": "Democrats.com",
-        "isPooling": false,
-        "disclaimer": "I will receive updates from <a href=\"http://www.democrats.com\" target=\"_blank\">Democrats.com</a>."
-    },
-
-    {
-        "id": "fp",
-        "title": "Free Press Action Fund",
-        "isPooling": false,
-        "showNewPage": true,
-        "newCallTool": true,
-        "disclaimer": "I will receive updates from <a href=\"http://www.freepress.net\" target=\"_blank\">Free Press Action Fund</a>."
-    },
-
-    {
-        "id": "tn",
-        "title": "The Nation",
-        "isPooling": true,
-        "disclaimer": true
-    },
-
-    {
-        "id": "coc",
-        "title": "Color of Change",
-        "isPooling": true,
-        "disclaimer": true
-    }
-];
-
-var ref = location.search.match(/ref=([\w-]+)/);
-var org;
-if (ref) {
-    for (var i = 0; i < organizations.length; i++) {
-        if (ref[1] === organizations[i].id) {
-            org = organizations[i];
-            if (!org.showNewPage && window.location.href.indexOf('/action') == -1)
-                window.location.replace('/action?ref='+org.id);
-            break;
-        }
-    }
-}
-
 function removeNode(target) {
     var node = document.querySelector(target);
     node.parentElement.removeChild(node);
-}
-
-var maverick = false;
-if (!org) {
-    maverick = true;
-    org = organizations[0];
 }
 
 var disclaimer = document.querySelector('.disclaimer');
@@ -358,12 +368,18 @@ function onResize() {
     }
 }
 
-if (window.location.href.indexOf('dropoff=1') != -1)
+if (window.location.href.indexOf('dropoff=1') != -1) {
     window.location.href = '#dropoff';
+}
 
 function directOpenCallModal() {
     document.getElementById('call_header').textContent = 'Enter your phone number and we\'ll connect you.';
     modal_show('call_tool');
 }
-if (window.location.href.indexOf('call=1') != -1)
+if (window.location.href.indexOf('call=1') != -1) {
     directOpenCallModal()
+}
+
+
+
+})(); // End closure
