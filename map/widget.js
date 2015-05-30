@@ -482,3 +482,19 @@ link.type = 'text/css';
 link.rel = 'stylesheet';
 link.href = '/map/font-awesome.css';
 document.head.appendChild(link);
+
+function modal_show(id) {
+    var overlayNode = document.getElementById(id);
+    overlayNode.style.display = 'table';
+    setTimeout(function() {
+        overlayNode.className = overlayNode.className.replace(/ ?invisible ?/, ' ');
+    }, 50);
+};
+
+function modal_hide(id) {
+    var overlayNode = document.getElementById(id);
+    overlayNode.className += 'invisible';
+    setTimeout(function() {
+        overlayNode.style.display = 'none';
+    }, 400);
+}
