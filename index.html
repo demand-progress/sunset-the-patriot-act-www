@@ -22,8 +22,33 @@ EMAIL_SUBJECT = "Unreal: Congress is about to reauthorize the PATRIOT Act - and 
 
 
 </script>
+
+<link rel="stylesheet" type="text/css" href="showdown/showdown.css"/>
+
+
 </head>
 <body>
+
+<!-- SHOWDOWN!! //////////////////////////////////////////////////////////// -->
+<div id="showdown">
+    <div class="border_top"></div>
+    <div class="arena">
+        <img class="contestants" src="showdown/contestants.png"/>
+        <div class="video">
+            <div class="wrapper" id="showdown_video"></div>
+            <script type="text/javascript">
+                var iframe = document.createElement('iframe');
+                iframe.src = '//www.youtube.com/embed/Q7qy-4CBBZo';
+                iframe.frameborder = 0;
+                iframe.allowfullscreen = 1;
+                document.getElementById('showdown_video').appendChild(iframe);
+            </script>
+        </div>
+        <img class="fight" src="showdown/fight.png"/>
+    </div>
+    <div class="border_bottom"></div>
+</div>
+<!-- /////////////////////////////////////////////////////////////////////// -->
 
 <header id="top">
     <h1>Patriot Act Sunsets 6/1</h1>
