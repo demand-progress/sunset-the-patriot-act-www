@@ -36,14 +36,12 @@ function launch() {
     if (!canvasIsVisible) {
         return;
     }
-    console.log('launche');
 
     launchFrom(mousePos.x);
 }
 
 function launchFrom(x) {
     if (rockets.length < 10) {
-        console.log('trol');
         var rocket = new Rocket(x);
         rocket.explosionColor = Math.floor(Math.random() * 360 / 10) * 10;
         rocket.vel.y = Math.random() * -3 - 4;
@@ -66,7 +64,6 @@ function checkIfCanvasIsVisible() {
         canvas.currentStyle.display :
         getComputedStyle(canvas, null).display;
 
-    console.log('display: ', display);
 
     return display === 'block';
 }
@@ -107,7 +104,7 @@ function loop() {
 
     // clear canvas
     // context.fillStyle = "rgba(23, 22, 30, 0.05)";
-    context.fillStyle = "rgba(23, 22, 30, 0.3)";
+    // context.fillStyle = "rgba(23, 22, 30, 0.3)";
     context.fillRect(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
 
     var existingRockets = [];
