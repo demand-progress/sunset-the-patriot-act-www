@@ -127,5 +127,3 @@ function onResize() {
 // Reset form
 document.querySelector('.call_tool input[type=tel]').focus();
 document.querySelector('.call_tool button[type=submit]').removeAttribute('disabled');
-
-modal_show('call_tool_script');
