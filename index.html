@@ -26,240 +26,246 @@ EMAIL_SUBJECT = "Unreal: Congress is about to reauthorize the PATRIOT Act - and 
 </head>
 <body>
 
-<header id="top">
-    <h1>Patriot Act Sunsets 6/1</h1>
-    <h2>&mdash; if we make it. &mdash;</h2>
-    <br>
-
-    <div class="desktop">
-        <p>
-            This is a fight of our lives. People hate the Patriot Act — it’s what
-            the NSA has used to violate the Constitution and monitor our private
-            lives day in and day out for the past 14 years. But, after our epic
-            outcry and a showdown last week, we’re on the verge of reaching a
-            milestone that's always seemed out of reach: the Patriot Act is
-            poised to sunset at midnight on June 1st. Now, the NSA's shills are
-            making a final attempt this Sunday at the 11th hour to re-up on the
-            Patriot Act. We need you more than ever to help secure this first
-            historic move away from mass surveillance.
-        </p>
-
-    </div>
-
-    <div class="action">
-        <h4>Submit this <a href="" class="letter">letter</a> to Congress:</h4>
-        <div class="email_signup">
-            <form>
-                <input type="text" id="first_name" placeholder="Your name"/><input type="email" id="email" placeholder="Email"/><input type="text" id="street_address" placeholder="Street address"/><input type="text" id="postcode" placeholder="Zip code"/>
-                <div id="thanks">Thanks!</div>
-                <button type="submit">Send now</button>
-                <div class="squaredFour">
-                    <input type="checkbox" value="consent" id="pooling-opt-in" name="pool" checked="checked">
-                    <label class="checkbox" for="pooling-opt-in"></label>
-                    <label class="text" for="pooling-opt-in">I consent to being added to the email list of one or more participating orgs.</label>
-                </div>
-            </form>
-        </div>
-        <span class="disclaimer">
-            A third-party consultant will help us manage data collected from this campaign.
-        </span>
-    </div>
-
-    
-    <div class="mobile">
-        <p>
-            Americans were outraged to learn that the NSA has been spying on <em>all of us</em>.  But Congress is on the verge of reauthorizing some of the worst parts of the PATRIOT Act for another five years.
-            Section 215 of the PATRIOT Act &mdash; that's the authority that the NSA exploits to collect data about almost all of our <a href="#" class="open-call-tool">phone calls</a> &mdash; expires on June 1st.
-        </p>
-
-        <p class="fight-back">Congress is trying extend it: Help us fight back!</p>
-    </div>
-
-</header>
-
-<section id="dropoff">
-    <h2>The single most important<br/>thing you can do.</h2>
-    <p>
-        Our senators and reps are in their home states this week. The most high-impact thing any of us can do is to show up at their offices and deliver this letter. We only have a few days until Sunday. Will you go and deliver this letter to them? While you're there, take a photo and tweet it to <a href="https://twitter.com/search?q=%23SunsetThePatriotAct" target="_blank">#SunsetthePatriotAct</a> or email: <a href="mailto:team@fightforthefuture.org">team@fightforthefuture.org</a>.
-    </p>
-    <div class="flyer">
-        <a href="/images/Letter-For-Delivery.pdf" target="_blank">This is the letter.</a>
-        Here are their offices:
-    </div>
-    <div id="select_region"></div>
-    <div id="map-gutter"><div id="map-canvas"></div></div>
-    <br/><h3 class="nopad">See how they voted:</h3>
-    <div id="map"></div>
-    <br/>
-</section>
-
-<section class="dark">
-    <br/>
-    <h3>Last week, we protested around the country, and won precious time</h3>
-    <p>
-        Protests happened at sunset at Senate offices around the country. Senate leader
-        Mitch McConnell forced the Senate into an unusual late night session, but
-        **failed** to renew the PATRIOT Act. Now, the deadline approaches fast.
-        <br/>
-        <a href="#top" class="btn">Take Action</a>
-    </p>
-
-    <div id="gallery">
-        <iframe class="imgur-album" width="100%" height="650" frameborder="0" src="https://imgur.com/a/iDSvA/embed"></iframe>
-    </div>
-
-</section>
-<section>
-    <h2>Spread the word.</h2>
-    <h3>Share this page!</h3>
-    <p>
-        If Congress maintains the bulk collection provisions of the PATRIOT Act, it's game over for our privacy. Whether
-        you're browsing the Internet, sending a text message, or buying a book, the
-        government could be watching. Don't let Congress undermine the Constitution.
-        Help us share this action with as many people as possible!
-
-    </p>
-    <p>
-        Want to learn more?  This article explains <a href="http://www.slate.com/articles/news_and_politics/politics/2015/05/patriot_act_s_section_215_should_expire_why_we_should_let_the_law_s_worst.html" target="_blank">what's going on in Congress</a>.
-    </p>
-    <div class="share">
-        <a href="https://www.facebook.com" class="facebook" target="_blank">Share</a><a href="https://www.twitter.com" class="twitter" target="_blank">Tweet</a>
-    </div>
-    
-    <h3 id="code">Site owners: Get the code!</h3>
-    <p>Add this code to your page to show a banner on top. <strong>(<a href="https://flagger.io/#SHOW_CC_WIDGET" target="_blank">SHOW DEMO</a>)</strong></p>
-    <blockquote>&lt;script type="text/javascript">var _cc_options = {animation: 'banner'};&lt;/script><br/>
-&lt;script type="text/javascript" src="https://fightforthefuture.github.io/usafreedom-widget/widget.min.js">&lt;/script></blockquote>
-    <img class="demo" src="/images/banner.png"/>
-</section>
-
-
-<div class="logos">
-    <a href="https://demandprogress.org" target="_blank"><img src="images/dp.png"></a>
-    <a href="https://www.fightforthefuture.org" target="_blank"><img src="images/fftf.png"></a>
-    <a href="http://www.freepress.net" target="_blank"><img src="images/freepress-logo.png"></a>
-    <a href="http://www.restorethe4th.com/" target="_blank"><img src="../images/footer-restore4th.png"></a>
+<div id="fireworks">
+    <canvas class="fireworks desktop"></canvas>
+    <img class="victory" src="images/spacer.png">
+    <script type="text/javascript" src="js/fireworks.js"></script>
 </div>
-<div class="press">
-    For press inquiries, please contact us at:
-    <br/><br/>
-    <a href="tel://202-681-7582">202-681-7582</a>
-    <em>or</em>
-    <a href="mailto:press@demandprogress.org">press@demandprogress.org</a>
-    <br/><br/>
-    <a href="tel://978-852-6457">978-852-6457</a>
-    <em>or</em>
-    <a href="tel://617-690-9547">617-690-9547</a>
-    <em>or</em>
-    <a href="mailto:press@fightforthefuture.org">press@fightforthefuture.org</a>
-</div>
-<div class="bottom">
-    <a href="javascript:directOpenCallModal();">Call your lawmakers. Dial <em>1-920-END-4-215</em> <img src="/images/phone_icon.png"/></a>
-</div>
+<div id="not_fireworks">
 
-<div class="overlay share_modal invisible" id="share_modal">
-    <div class="gutter">
-        <div class="modal">
-            <a class="close" href="#">×</a>
-            <h1>Thanks. Please share this!</h1>
-            <p class="nopad">
-                Time is running out. In order to send Congress a message they
-                can't ignore, we need as many people to participate as possible.
-                Please share this page now!
+    <header id="top">
+        <h1>We Patriot the Sunsetted</h1>
+        <h2>&mdash; made section 215 is invisible, momma! &mdash;</h2>
+        <br>
+
+
+        <div class="desktop">
+            <p>
+
+                Thanks to public outcry Section 215 of the PATRIOT Act has expired &mdash;
+                and it's the first post-9/11 legislative victory to restrain the surveillance
+                state. But the NSA's friends in Congress could bring it back, as early as
+                Tuesday. THOSE JERKS. Do everything you can to stop them!   
             </p>
-            <div class="share">
-                <a href="https://www.facebook.com" class="facebook" target="_blank">Share</a><a href="https://www.twitter.com" class="twitter" target="_blank">Tweet</a>
+
+        </div>
+
+        <div class="action">
+            <h4>Submit this <a href="" class="letter">letter</a> to Congress:</h4>
+            <div class="email_signup">
+                <form>
+                    <input type="text" id="first_name" placeholder="Your name"/><input type="email" id="email" placeholder="Email"/><input type="text" id="street_address" placeholder="Street address"/><input type="text" id="postcode" placeholder="Zip code"/>
+                    <div id="thanks">Thanks!</div>
+                    <button type="submit">Send now</button>
+                    <div class="squaredFour">
+                        <input type="checkbox" value="consent" id="pooling-opt-in" name="pool" checked="checked">
+                        <label class="checkbox" for="pooling-opt-in"></label>
+                        <label class="text" for="pooling-opt-in">I consent to being added to the email list of one or more participating orgs.</label>
+                    </div>
+                </form>
+            </div>
+            <span class="disclaimer">
+                A third-party consultant will help us manage data collected from this campaign.
+            </span>
+        </div>
+
+        
+        <div class="mobile">
+            <p>
+                Americans were outraged to learn that the NSA has been spying on <em>all of us</em>.  But Congress is on the verge of reauthorizing some of the worst parts of the PATRIOT Act for another five years.
+                Section 215 of the PATRIOT Act &mdash; that's the authority that the NSA exploits to collect data about almost all of our <a href="#" class="open-call-tool">phone calls</a> &mdash; expires on June 1st.
+            </p>
+
+            <p class="fight-back">Congress is trying extend it: Help us fight back!</p>
+        </div>
+
+    </header>
+
+    <section id="dropoff">
+        <h2>The single most important<br/>thing you can do.</h2>
+        <p>
+            Our senators and reps are in their home states this week. The most high-impact thing any of us can do is to show up at their offices and deliver this letter. We only have a few days until Sunday. Will you go and deliver this letter to them? While you're there, take a photo and tweet it to <a href="https://twitter.com/search?q=%23SunsetThePatriotAct" target="_blank">#SunsetthePatriotAct</a> or email: <a href="mailto:team@fightforthefuture.org">team@fightforthefuture.org</a>.
+        </p>
+        <div class="flyer">
+            <a href="/images/Letter-For-Delivery.pdf" target="_blank">This is the letter.</a>
+            Here are their offices:
+        </div>
+        <div id="select_region"></div>
+        <div id="map-gutter"><div id="map-canvas"></div></div>
+        <br/><h3 class="nopad">See how they voted:</h3>
+        <div id="map"></div>
+        <br/>
+    </section>
+
+    <section class="dark">
+        <br/>
+        <h3>Last week, we protested around the country, and won precious time</h3>
+        <p>
+            Protests happened at sunset at Senate offices around the country. Senate leader
+            Mitch McConnell forced the Senate into an unusual late night session, but
+            **failed** to renew the PATRIOT Act. Now, the deadline approaches fast.
+            <br/>
+            <a href="#top" class="btn">Take Action</a>
+        </p>
+
+        <div id="gallery">
+            <iframe class="imgur-album" width="100%" height="650" frameborder="0" src="https://imgur.com/a/iDSvA/embed"></iframe>
+        </div>
+
+    </section>
+    <section>
+        <h2>Spread the word.</h2>
+        <h3>Share this page!</h3>
+        <p>
+            If Congress maintains the bulk collection provisions of the PATRIOT Act, it's game over for our privacy. Whether
+            you're browsing the Internet, sending a text message, or buying a book, the
+            government could be watching. Don't let Congress undermine the Constitution.
+            Help us share this action with as many people as possible!
+
+        </p>
+        <p>
+            Want to learn more?  This article explains <a href="http://www.slate.com/articles/news_and_politics/politics/2015/05/patriot_act_s_section_215_should_expire_why_we_should_let_the_law_s_worst.html" target="_blank">what's going on in Congress</a>.
+        </p>
+        <div class="share">
+            <a href="https://www.facebook.com" class="facebook" target="_blank">Share</a><a href="https://www.twitter.com" class="twitter" target="_blank">Tweet</a>
+        </div>
+        
+        <h3 id="code">Site owners: Get the code!</h3>
+        <p>Add this code to your page to show a banner on top. <strong>(<a href="https://flagger.io/#SHOW_CC_WIDGET" target="_blank">SHOW DEMO</a>)</strong></p>
+        <blockquote>&lt;script type="text/javascript">var _cc_options = {animation: 'banner'};&lt;/script><br/>
+    &lt;script type="text/javascript" src="https://fightforthefuture.github.io/usafreedom-widget/widget.min.js">&lt;/script></blockquote>
+        <img class="demo" src="/images/banner.png"/>
+    </section>
+
+
+    <div class="logos">
+        <a href="https://demandprogress.org" target="_blank"><img src="images/dp.png"></a>
+        <a href="https://www.fightforthefuture.org" target="_blank"><img src="images/fftf.png"></a>
+        <a href="http://www.freepress.net" target="_blank"><img src="images/freepress-logo.png"></a>
+        <a href="http://www.restorethe4th.com/" target="_blank"><img src="../images/footer-restore4th.png"></a>
+    </div>
+    <div class="press">
+        For press inquiries, please contact us at:
+        <br/><br/>
+        <a href="tel://202-681-7582">202-681-7582</a>
+        <em>or</em>
+        <a href="mailto:press@demandprogress.org">press@demandprogress.org</a>
+        <br/><br/>
+        <a href="tel://978-852-6457">978-852-6457</a>
+        <em>or</em>
+        <a href="tel://617-690-9547">617-690-9547</a>
+        <em>or</em>
+        <a href="mailto:press@fightforthefuture.org">press@fightforthefuture.org</a>
+    </div>
+    <div class="bottom">
+        <a href="javascript:directOpenCallModal();">Call your lawmakers. Dial <em>1-920-END-4-215</em> <img src="/images/phone_icon.png"/></a>
+    </div>
+
+    <div class="overlay share_modal invisible" id="share_modal">
+        <div class="gutter">
+            <div class="modal">
+                <a class="close" href="#">×</a>
+                <h1>Thanks. Please share this!</h1>
+                <p class="nopad">
+                    Time is running out. In order to send Congress a message they
+                    can't ignore, we need as many people to participate as possible.
+                    Please share this page now!
+                </p>
+                <div class="share">
+                    <a href="https://www.facebook.com" class="facebook" target="_blank">Share</a><a href="https://www.twitter.com" class="twitter" target="_blank">Tweet</a>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
 
-<div class="overlay letter invisible" id="letter">
-    <div class="gutter">
-        <div class="modal">
-            <a class="close" href="#">×</a>
-            <h1>Letter text</h1>
-            <p class="nopad">
-                It’s an outrage that Congress is considering renewing key PATRIOT Act provisions and continuing to allow the NSA to spy on all of us.  I demand that you vote against reauthorization, and let Section 215 and other provisions expire once and for all.
-            </p>
-            <br>
+    <div class="overlay letter invisible" id="letter">
+        <div class="gutter">
+            <div class="modal">
+                <a class="close" href="#">×</a>
+                <h1>Letter text</h1>
+                <p class="nopad">
+                    It’s an outrage that Congress is considering renewing key PATRIOT Act provisions and continuing to allow the NSA to spy on all of us.  I demand that you vote against reauthorization, and let Section 215 and other provisions expire once and for all.
+                </p>
+                <br>
+            </div>
         </div>
     </div>
-</div>
 
-<div class="overlay drop_in invisible" id="drop_in">
-    <div class="gutter">
-        <div class="modal">
-            <a class="close" href="#">×</a>
-            <h1 id="drop_in_header"></h1>
-            <p class="address" id="drop_in_address"></p>
-            <div class="keep_in_mind">
-                <p class="address"><a id="get_directions" href="#" target="_blank">(Get directions)</a></p>
-                <p class="blurb">
-                    Be creative! You can deliver <a href="/images/Letter-For-Delivery.pdf" target="_blank">our letter</a>, take a photo with <a href="https://www.protestsign.org" target="_blank">protestsign.org</a> loaded on your phone or tablet, or feel free to improvise.
-                    Just make sure you lawmaker knows how you feel about mass surveillance!
-                    Please share your photos and experiences to <a href="https://twitter.com/search?q=%23SunsetThePatriotAct" target="_blank">#SunsetThePatriotAct</a> on Twitter, or email them to <a href="mailto:team@fightforthefuture.org">team@fightforthefuture.org</a>.
+    <div class="overlay drop_in invisible" id="drop_in">
+        <div class="gutter">
+            <div class="modal">
+                <a class="close" href="#">×</a>
+                <h1 id="drop_in_header"></h1>
+                <p class="address" id="drop_in_address"></p>
+                <div class="keep_in_mind">
+                    <p class="address"><a id="get_directions" href="#" target="_blank">(Get directions)</a></p>
+                    <p class="blurb">
+                        Be creative! You can deliver <a href="/images/Letter-For-Delivery.pdf" target="_blank">our letter</a>, take a photo with <a href="https://www.protestsign.org" target="_blank">protestsign.org</a> loaded on your phone or tablet, or feel free to improvise.
+                        Just make sure you lawmaker knows how you feel about mass surveillance!
+                        Please share your photos and experiences to <a href="https://twitter.com/search?q=%23SunsetThePatriotAct" target="_blank">#SunsetThePatriotAct</a> on Twitter, or email them to <a href="mailto:team@fightforthefuture.org">team@fightforthefuture.org</a>.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="overlay call_tool invisible" id="call_tool">
+        <div class="gutter">
+            <div class="modal">
+                <a class="close" href="#">×</a>
+                <h1 id="call_header">Awesome &mdash; your letter was sent to congress.</h1>
+                <p class="nopad">
+                    Will you call your lawmakers to tell them to let the Patriot Act sunset?  Making a phone call is even more effective than sending a letter.  We'll connect you to them and give you a script.  It'll just take a couple of minutes &mdash; and could end mass surveillance.
+                    <br>
+                    <form>
+                    <input class="phone-number" type="tel" placeholder="Your number" required>
+                    <button>CONNECT ME</button>
+                    </form>
+
+                    <a href="#" class="share">I can't call right now but I'll share this page instead</a>
                 </p>
             </div>
         </div>
     </div>
-</div>
 
 
-<div class="overlay call_tool invisible" id="call_tool">
-    <div class="gutter">
-        <div class="modal">
-            <a class="close" href="#">×</a>
-            <h1 id="call_header">Awesome &mdash; your letter was sent to congress.</h1>
-            <p class="nopad">
-                Will you call your lawmakers to tell them to let the Patriot Act sunset?  Making a phone call is even more effective than sending a letter.  We'll connect you to them and give you a script.  It'll just take a couple of minutes &mdash; and could end mass surveillance.
-                <br>
-                <form>
-                <input class="phone-number" type="tel" placeholder="Your number" required>
-                <button>CONNECT ME</button>
-                </form>
-
-                <a href="#" class="share">I can't call right now but I'll share this page instead</a>
-            </p>
+    <div class="overlay call_tool_script invisible" id="call_tool_script">
+        <div class="gutter">
+            <div class="modal">
+                <a class="close" href="#">×</a>
+                <h1>We're calling you now.</h1>
+                <p class="nopad">
+                    We'll connect you to one of your senators, then your other senator, and then your representative.  Don’t hang up between calls — just press <strong>*</strong> after each call is over to move on to the next one.  You can say:
+                    <br>
+                    <br>
+                    “It’s an outrage that Congress is considering renewing key Patriot Act provisions and continuing to allow the NSA to spy on all of us.  I demand that you vote against reauthorization, and let Section 215 and other provisions expire once and for all."
+                    <br>
+                    <br>
+                    It'd be great if you could make more calls once you're done with your own lawmakers.  If you're able, just keep clicking * after each call, and keep on calling!
+                    <br>
+                    <br>
+                </p>
+            </div>
         </div>
     </div>
-</div>
 
+    <div class="social-buttons">
+        <a target="_blank" href="https://www.facebook.com/sharer.php?u=https://www.sunsetthepatriotact.com/%3Fref%3D" class="facebook">
+            Share
+        </a>
 
-<div class="overlay call_tool_script invisible" id="call_tool_script">
-    <div class="gutter">
-        <div class="modal">
-            <a class="close" href="#">×</a>
-            <h1>We're calling you now.</h1>
-            <p class="nopad">
-                We'll connect you to one of your senators, then your other senator, and then your representative.  Don’t hang up between calls — just press <strong>*</strong> after each call is over to move on to the next one.  You can say:
-                <br>
-                <br>
-                “It’s an outrage that Congress is considering renewing key Patriot Act provisions and continuing to allow the NSA to spy on all of us.  I demand that you vote against reauthorization, and let Section 215 and other provisions expire once and for all."
-                <br>
-                <br>
-                It'd be great if you could make more calls once you're done with your own lawmakers.  If you're able, just keep clicking * after each call, and keep on calling!
-                <br>
-                <br>
-            </p>
-        </div>
+        <a target="_blank" href="https://twitter.com/intent/tweet?related=demandprogress&text=Unreal%3A%20Congress%20about%20to%20extend%20%23PatriotAct%20and%20%23NSA%20spying%20on%20all%20of%20us.%20Tell%20them%20to%20back%20off%3A%20sunsetthepatriotact.com%2F%3Fref%3D" class="twitter">
+            Tweet
+        </a>
+
+        <a href="mailto:person@domain.tld" class="email">
+            Email
+        </a>
     </div>
-</div>
 
-<div class="social-buttons">
-    <a target="_blank" href="https://www.facebook.com/sharer.php?u=https://www.sunsetthepatriotact.com/%3Fref%3D" class="facebook">
-        Share
-    </a>
-
-    <a target="_blank" href="https://twitter.com/intent/tweet?related=demandprogress&text=Unreal%3A%20Congress%20about%20to%20extend%20%23PatriotAct%20and%20%23NSA%20spying%20on%20all%20of%20us.%20Tell%20them%20to%20back%20off%3A%20sunsetthepatriotact.com%2F%3Fref%3D" class="twitter">
-        Tweet
-    </a>
-
-    <a href="mailto:person@domain.tld" class="email">
-        Email
-    </a>
-</div>
+</body>
 
 <script type="text/javascript" src="js/sunset.js"></script>
 <script type="text/javascript" src="/map/widget.js" async></script>
