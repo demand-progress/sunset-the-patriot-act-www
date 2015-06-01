@@ -132,13 +132,12 @@ blockquote {
     font-family: "Courier New", mono;
     word-wrap: break-word;
     max-width: calc(100% - 64px);
-    max-width: 800px;
     text-align: left;
     color: #eee;
     line-height: 20px;
 }
 img.demo {
-    max-width: 800px;
+    max-width: calc(100% - 64px);
     height: auto;
     margin-bottom: 10px;
 }
@@ -704,6 +703,12 @@ div.social-buttons {
     }
 }
 
+@media screen and (max-width: 480px) {
+    div.social-buttons {
+        display: none;
+    }
+}
+
 div.social-buttons a {
     background-repeat: no-repeat;
     display: block;
@@ -895,21 +900,15 @@ h3.nopad {
     }
 }
 
-#fireworks img {
-    width: 100%;
-    height: 100%;
-    height: 800px;
-    position: absolute;
-    left: 0px;
-    top: 0px;
-}
-#fireworks canvas {
-    display: block;
-    width: 100%;
-    height: 800px;
-}
-#not_fireworks {
-    position: absolute;
-    left: 0px;
-    top: 0px;
+/* Fixes for Map embed on mobile */
+@media screen and (max-width: 390px) {
+    .senators {
+        max-width: 320px;
+        overflow: hidden;
+    }
+    .senators > div {
+        -webkit-transform: scale(0.8);
+            -ms-transform: scale(0.8);
+                transform: scale(0.8);
+    }
 }
