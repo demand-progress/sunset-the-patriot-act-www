@@ -299,11 +299,13 @@ document.querySelector('.action h4 a.letter').addEventListener('click', function
     modal_show('letter');
 });
 
+/*
 document.querySelector('a.open-call-tool').addEventListener('click', function(e) {
     e.preventDefault();
 
     modal_show('call_tool');
 });
+*/
 
 document.querySelector('.call_tool a.share').addEventListener('click', function(e) {
     e.preventDefault();
