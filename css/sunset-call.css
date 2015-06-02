@@ -513,6 +513,10 @@ section .share {
     font-weight: bold;
     text-align: center;
 }
+.overlay .modal .headline {
+    font-weight: bold;
+    text-align: center;
+}
 .overlay .modal h1 {
     background: #20cba1;
     color: white;
