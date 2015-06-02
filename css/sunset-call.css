@@ -494,7 +494,7 @@ section .share {
     margin: 0px auto;
     padding-bottom: 10px;
     position: relative;
-    text-align: center;
+    text-align: left;
     overflow: auto;
 }
 .overlay .modal a.close {
@@ -508,6 +508,10 @@ section .share {
 }
 .overlay .modal a.close:hover {
     opacity: .6;
+}
+.overlay .modal .quote {
+    font-weight: bold;
+    text-align: center;
 }
 .overlay .modal h1 {
     background: #20cba1;

@@ -74,6 +74,10 @@ for (var i = 0; i < ems.length; i++) {
     }, false);
 }
 
+document.querySelector('h2.now').addEventListener('click', function(e) {
+    modal_show('call_tool_script');
+});
+
 document.querySelector('.call_tool a.share').addEventListener('click', function(e) {
     e.preventDefault();
 
