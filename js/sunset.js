@@ -217,16 +217,6 @@ document.querySelector('.email_signup form').addEventListener('submit', function
     xhr1.open('post', 'https://queue.fightforthefuture.org/action', true);
     xhr1.send(data);
 
-    // Send to Slide
-    var xhr2 = new XMLHttpRequest();
-    xhr2.onreadystatechange = function() {
-        if (xhr2.readyState === 4) {
-            // console.log(xhr2.response);
-        }
-    };
-    xhr2.open('post', 'https://water-slide.herokuapp.com/purpose/', true);
-    xhr2.send(data);
-
     modal_show('call_tool');
     document.querySelector('input[type=tel]').focus();
 }, false);
